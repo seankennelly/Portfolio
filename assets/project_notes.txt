@@ -1,0 +1,13 @@
+The structure of this website is largely built, but the work is far from over!
+
+1. Saved By The Bush is not yet up
+2. Links in footer are not all valid
+3. LinkedIn isn't even set up yet!
+4. There should be Github repos for most of these projects
+5. The hover-revealed project texts should have 2 links each:
+	1. The site (active)
+	2. The Github repo
+6. Relevant Experience - 'Design & Build' needs beefing up
+6. The 'Courses' section needs beefing up. Codecademy is lacking and Kreativestorm must be filled in
+7. This site needs to be launced on GreekGeeks!
+8. Once all these things are done this document should be deleted, and these files should be in a nice clean Github repo
