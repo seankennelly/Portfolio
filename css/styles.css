@@ -203,7 +203,7 @@ section {
 
 .navbar-brand {
   font-size: calc(0.75rem + 0.5vw);
-}  
+}
 
 nav .links {
   cursor: pointer;
@@ -248,7 +248,7 @@ nav .links .navbar-text:last-of-type::after {
   #email-address {
     margin-top: 0;
     margin-left: 3rem;
-  } 
+  }
 }
 
 footer {
@@ -271,6 +271,7 @@ footer hr {
 }
 
 @media (min-width: 768px) {
+
   /* HR is replaced by border as footer changes orientation */
   footer hr {
     display: none;
@@ -349,7 +350,7 @@ header h1 {
   margin-bottom: 0.5rem;
 }
 
-header .tagline.negative-content{
+header .tagline.negative-content {
   margin: 0 auto 4rem;
   font-size: 1.1rem;
   padding: 0.2rem 0.5rem;
@@ -375,7 +376,16 @@ header p {
   margin: 2.5rem auto 0;
   padding: 0;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.258);
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-around;
   cursor: pointer;
+}
+
+.project-links a {
+  margin: 0 0.5rem;
 }
 
 .project-display:nth-child(2) {
@@ -392,7 +402,7 @@ header p {
   .project-display:nth-child(2) {
     /* Readjusts margin for first box */
     margin-top: 1rem;
-}
+  }
 }
 
 @media (min-width: 992px) {
@@ -497,7 +507,7 @@ header p {
 @media (min-width: 992px) {
   .courses-cv-wrapper {
     width: calc(85% + 2rem);
-}
+  }
 
   .courses-cv-wrapper h2.negative-content {
     width: calc(80% + 4rem);
@@ -522,7 +532,7 @@ header p {
     width: calc(80% + 2rem);
   }
 }
-  
+
 @media(min-width: 992px) {
   .card-container {
     width: calc(75% + 4rem);
@@ -551,7 +561,7 @@ header p {
   list-style-type: disc;
 }
 
-.card-container .col-12:first-child img, 
+.card-container .col-12:first-child img,
 .carousel-item:first-child img {
   /* Padding around Kent logo */
   padding: 1rem 1rem 0;
@@ -569,6 +579,7 @@ header p {
 .cv h2 {
   display: block;
 }
+
 .cv img {
   max-width: 500px;
 }
