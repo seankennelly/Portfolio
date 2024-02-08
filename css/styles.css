@@ -4,12 +4,12 @@
 2. PAGE STANDARDS
 3. NAVBAR & FOOTER
 4. HEADER
-   MAIN:
-    5. PROJECT DISPLAYS
-    6 RELEVANT EXPERIENCE
-    7.1 COURSES & CV CONTAINER
-    7.2 COURSES
-    7.3 CV
+5. MAIN:
+    5.1. PROJECT DISPLAYS
+    5.2. RELEVANT EXPERIENCE
+    5.3. COURSES & CV CONTAINER
+    5.4. COURSES
+    5.5. CV
 */
 
 
@@ -363,7 +363,7 @@ header p {
 }
 
 /* ---------------------------
-  Main: 5. Project Displays
+  Main: 5.1. Project Displays
   -------------------------- */
 .projects-wrapper {
   margin: 0 auto;
@@ -453,7 +453,7 @@ header p {
 }
 
 /* ---------------------------
-  Main: 6. Relevant Experience 
+  Main: 5.2. Relevant Experience 
   ---------------------------*/
 .exp-container {
   margin: 1rem auto 0;
@@ -488,7 +488,7 @@ header p {
 }
 
 /* -------------------------------
-  Main: 7.1 Courses & CV Container
+  Main: 5.3. Courses & CV Container
   ------------------------------- */
 .courses-cv-wrapper {
   margin: 0 auto 0;
@@ -505,7 +505,7 @@ header p {
 }
 
 /* ---------------
-  Main: 7.2 Courses
+  Main: 5.4. Courses
   ---------------*/
 .courses {
   /* So that page view is not disrupted when cycling through carousel elements of varying heights */
@@ -564,7 +564,7 @@ header p {
 }
 
 /* -------------
-  Main: 7.3 C.V
+  Main: 5.5. C.V
   ----------- */
 .cv h2 {
   display: block;
