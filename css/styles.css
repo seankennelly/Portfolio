@@ -6,10 +6,11 @@
 4. HEADER
 5. MAIN:
     5.1. PROJECT DISPLAYS
-    5.2. RELEVANT EXPERIENCE
-    5.3. COURSES & CV CONTAINER
-    5.4. COURSES
-    5.5. CV
+    5.2. Project Details
+    5.3. RELEVANT EXPERIENCE
+    5.4. COURSES & CV CONTAINER
+    5.5. COURSES
+    5.6. CV
 */
 
 
@@ -367,6 +368,8 @@ header p {
   Main: 5.1. Project Displays
   -------------------------- */
 .projects-wrapper {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
 }
 
@@ -376,16 +379,6 @@ header p {
   margin: 2.5rem auto 0;
   padding: 0;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.258);
-}
-
-.project-links {
-  display: flex;
-  justify-content: space-around;
-  cursor: pointer;
-}
-
-.project-links a {
-  margin: 0 0.5rem;
 }
 
 .project-display:nth-child(2) {
@@ -422,7 +415,8 @@ header p {
 }
 
 .project-display .float-text {
-  width: 70%;
+  /* width: 70%;  */
+  /* Trying without */
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -462,9 +456,31 @@ header p {
   opacity: 1;
 }
 
+.project-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: #669ACD;
+}
+
+.project-links a {
+  margin: 0 0.5rem;
+}
+
 /* ---------------------------
-  Main: 5.2. Relevant Experience 
+  Main: 5.2. Project Details
   ---------------------------*/
+
+
+/* ---------------------------
+  Main: 5.3. Relevant Experience 
+  ---------------------------*/
+.experience {
+  display: flex;
+  justify-content: center;
+}
+
 .exp-container {
   margin: 1rem auto 0;
   text-align: left;
@@ -498,9 +514,11 @@ header p {
 }
 
 /* -------------------------------
-  Main: 5.3. Courses & CV Container
+  Main: 5.4. Courses & CV Container
   ------------------------------- */
 .courses-cv-wrapper {
+  display: flex;
+  justify-content: center;
   margin: 0 auto 0;
 }
 
@@ -515,7 +533,7 @@ header p {
 }
 
 /* ---------------
-  Main: 5.4. Courses
+  Main: 5.5. Courses
   ---------------*/
 .courses {
   /* So that page view is not disrupted when cycling through carousel elements of varying heights */
@@ -574,7 +592,7 @@ header p {
 }
 
 /* -------------
-  Main: 5.5. C.V
+  Main: 5.6. C.V
   ----------- */
 .cv h2 {
   display: block;
