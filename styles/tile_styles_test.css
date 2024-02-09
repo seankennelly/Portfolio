@@ -1,0 +1,15 @@
+/* WHAT IS LEFT HERE IS LEFTOVER FROM IMPORT BACK TO MAIN STYLESHEET. IT REMAINS ONLY IN CASE IT IS NEEDED. IF NOT THEN DELETE THIS STYLESHEET! */
+
+/* PROJECT DISPLAY - FLIP STYLES */
+.flip-container {
+  /* outline: red 1px solid; */
+  /* overflow: hidden; */
+  /* width: 350px;
+  height: 500px; */
+  /* perspective: 800px; */
+}
+
+/* .flip-container:hover>.tile {
+  cursor: pointer;
+  transform: rotateY(180deg);
+} */

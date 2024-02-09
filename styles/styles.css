@@ -379,6 +379,7 @@ header p {
   margin: 2.5rem auto 0;
   padding: 0;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.258);
+  /* box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25); */
 }
 
 .project-display:nth-child(2) {
@@ -467,6 +468,50 @@ header p {
 .project-links a {
   margin: 0 0.5rem;
 }
+
+/* TILE FLIP 
+  (ALSO USES JS) */
+
+.flip-container>.tile {
+  transform: rotateY(180deg);
+  /* cursor: pointer; */
+}
+
+.tile {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  background-color: rgb(47, 47, 47);
+  color: white;
+}
+
+.back-button {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: whitesmoke;
+  color: rgb(47, 47, 47);
+  cursor: pointer;
+}
+
+
 
 /* ---------------------------
   Main: 5.2. Project Details

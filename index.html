@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
   <!-- Google Font: Roboto & IBM Plex Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
   <!-- Animate CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- My Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
   <title>Seán Kennelly | Portfolio</title>
 </head>
 
@@ -66,8 +66,36 @@
           <div class="negative-wrapper">
             <h2 class="negative-content wow animate__animated animate__slideInRight">Projects</h2>
           </div>
+          <!-- FLIP TEST START -->
+          <div class="project-display" id="moonrise-tile">
+            <div class="tile">
+              <div class="front">
+                <img src="./images/moonrise.jpeg">
+                <div class="float-text">
+                  <h3>Moonrise Maternity</h3>
+                  <h4>&lt;Design, build, hosting, administration/&gt;</h4>
+                  <p>This site makes use of single-page design and Bootstrap components for an elegant way of displaying
+                    large
+                    amounts of information</p>
+                  <div class="project-links">
+                    <p id="moonrise-info">&lt;Info&gt;</p>
+                    <a href="https://www.moonrisematernity.com/" target=“_blank” rel="noopener">&lt;Page&gt;</a>
+                    <a href="https://github.com/seankennelly/Moonrise-Maternity" target="_blank"
+                      rel="noopener">&lt;Github&gt;</a>
+                  </div>
+                </div>
+              </div>
+              <div class="back">
+                <p class="back-button" id="moonrise-back">Back</p>
+                <h3>Moonrise Maternity</h3>
+                <p>This project was DOPE</p>
+              </div>
+            </div>
+          </div>
+          <!-- FLIP TEST END -->
+
           <!-- PROJECT DISPLAYS -->
-          <div class="project-display">
+          <!-- <div class="project-display">
             <img src="images/moonrise.jpeg" alt="A screengrab of the website 'Moonrise Maternity'">
             <div class="float-text">
               <h3>Moonrise Maternity</h3>
@@ -81,7 +109,7 @@
                 <a href="https://github.com/seankennelly/Moonrise-Maternity">&lt;Github&gt;</a>
               </p>
             </div>
-          </div>
+          </div> -->
           <div class="project-display">
             <img src="images/rock_paper_scissors.png" alt="A screengrab from my Rock Paper Scissors web app">
             <div class="float-text">
@@ -143,6 +171,70 @@
           </div>
         </div>
       </section>
+
+      <!-- NEW NEW SECTION! FLIPCARDS! -->
+
+      <!-- <div class="container">
+        <div class="card">
+          <div class="front"></div>
+          <div class="back">
+            <h1>Back of Card</h1>
+            <p>Additional info on the back of the card</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+        <div class="tile">
+          <div class="front"></div>
+          <div class="back">
+            <h1>Back of Card</h1>
+            <p>Additional info on the back of the card</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+        <div class="tile project display">
+          <div class="front">
+            <img>
+            <div class="float-text">
+              <h3>TEST TILE</h3>
+              <h4>&lt;Design, build, hosting, administration/&gt;</h4>
+              <p>This site makes use of single-page design and Bootstrap components for an elegant way of displaying
+                large
+                amounts of information</p>
+              <p class="project-links">
+                <a href="">&lt;Info&gt;</a>
+                <a href="https://www.moonrisematernity.com/" target=“_blank” rel="noopener">&lt;Page&gt;</a>
+                <a href="https://github.com/seankennelly/Moonrise-Maternity">&lt;Github&gt;</a>
+              </p>
+            </div>
+          </div>
+          <div class="back">
+            <h3>Moonrise Maternity</h3>
+            <p>This project was DOPE</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-display">
+        <img>
+        <div class="float-text">
+          <h3>Moonrise Maternity</h3>
+          <h4>&lt;Design, build, hosting, administration/&gt;</h4>
+          <p>This site makes use of single-page design and Bootstrap components for an elegant way of displaying
+            large
+            amounts of information</p>
+          <p class="project-links">
+            <a href="">&lt;Info&gt;</a>
+            <a href="https://www.moonrisematernity.com/" target=“_blank” rel="noopener">&lt;Page&gt;</a>
+            <a href="https://github.com/seankennelly/Moonrise-Maternity">&lt;Github&gt;</a>
+          </p>
+        </div>
+      </div> -->
+
+      <!-- END FLIPCARDS -->
 
       <!-- NEW SECTION START -->
       <section id="anchor-projects"> <!-- Projects -->
