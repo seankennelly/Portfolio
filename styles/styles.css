@@ -371,6 +371,7 @@ header p {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .project-display {
@@ -379,7 +380,9 @@ header p {
   margin: 2.5rem auto 0;
   padding: 0;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.258);
-  /* box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25); */
+
+  height: auto;
+  overflow: visible;
 }
 
 .project-display:nth-child(2) {
@@ -465,8 +468,11 @@ header p {
   color: #669ACD;
 }
 
-.project-links a {
+.project-links a,
+.project-display .project-links p {
   margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 /* TILE FLIP 
@@ -474,7 +480,6 @@ header p {
 
 .flip-container>.tile {
   transform: rotateY(180deg);
-  /* cursor: pointer; */
 }
 
 .tile {
@@ -485,32 +490,70 @@ header p {
   transform-style: preserve-3d;
 }
 
-.front,
-.back {
-  position: absolute;
+.front {
+  position: relative;
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
 }
 
 .back {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  z-index: 1;
+}
+
+.back {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
   transform: rotateY(180deg);
   background-color: rgb(47, 47, 47);
   color: white;
+  overflow: visible;
 }
 
 .back-button {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   padding: 0.5rem;
-  background-color: whitesmoke;
+  background-color: #FFFFFF;
   color: rgb(47, 47, 47);
   cursor: pointer;
 }
 
+.tab-content {
+  /* margin-top: 1rem; */
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  font-weight: 200;
+}
+
+.tab-content p {
+  margin-bottom: 0.5rem;
+}
+
+.back .nav-link {
+  color: inherit;
+  border-radius: 0;
+}
+
+.back .nav-link:active {
+  background-color: #F5F5F5;
+}
+
+.back li {
+  margin: 0.5rem;
+  text-align: left;
+  list-style: circle;
+}
 
 
 /* ---------------------------

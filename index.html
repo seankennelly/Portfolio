@@ -8,7 +8,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
   <!-- Google Font: Roboto & IBM Plex Mono -->
@@ -18,7 +17,7 @@
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
   <!-- Animate CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
   <!-- My Stylesheet -->
   <link rel="stylesheet" href="styles/styles.css">
   <title>Seán Kennelly | Portfolio</title>
@@ -66,11 +65,11 @@
           <div class="negative-wrapper">
             <h2 class="negative-content wow animate__animated animate__slideInRight">Projects</h2>
           </div>
-          <!-- FLIP TEST START -->
+          <!-- FLIP 1: MOONRISE -->
           <div class="project-display" id="moonrise-tile">
             <div class="tile">
               <div class="front">
-                <img src="./images/moonrise.jpeg">
+                <img src="./images/moonrise.jpeg" alt="A screengrab of the homepage for Moonrise Maternity">
                 <div class="float-text">
                   <h3>Moonrise Maternity</h3>
                   <h4>&lt;Design, build, hosting, administration/&gt;</h4>
@@ -78,174 +77,494 @@
                     large
                     amounts of information</p>
                   <div class="project-links">
-                    <p id="moonrise-info">&lt;Info&gt;</p>
+                    <p class="flip-button">&lt;Info&gt;</p>
                     <a href="https://www.moonrisematernity.com/" target=“_blank” rel="noopener">&lt;Page&gt;</a>
                     <a href="https://github.com/seankennelly/Moonrise-Maternity" target="_blank"
                       rel="noopener">&lt;Github&gt;</a>
                   </div>
                 </div>
               </div>
+              <!-- Back side of tile -->
               <div class="back">
-                <p class="back-button" id="moonrise-back">Back</p>
-                <h3>Moonrise Maternity</h3>
-                <p>This project was DOPE</p>
-              </div>
-            </div>
-          </div>
-          <!-- FLIP TEST END -->
+                <p class="back-button flip-button">Back</p>
+                <!-- Tab component nav -->
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
 
-          <!-- PROJECT DISPLAYS -->
-          <!-- <div class="project-display">
-            <img src="images/moonrise.jpeg" alt="A screengrab of the website 'Moonrise Maternity'">
-            <div class="float-text">
-              <h3>Moonrise Maternity</h3>
-              <h4>&lt;Design, build, hosting, administration/&gt;</h4>
-              <p>This site makes use of single-page design and Bootstrap components for an elegant way of displaying
-                large
-                amounts of information</p>
-              <p class="project-links">
-                <a href="">&lt;Info&gt;</a>
-                <a href="https://www.moonrisematernity.com/" target=“_blank” rel="noopener">&lt;Page&gt;</a>
-                <a href="https://github.com/seankennelly/Moonrise-Maternity">&lt;Github&gt;</a>
-              </p>
-            </div>
-          </div> -->
-          <div class="project-display">
-            <img src="images/rock_paper_scissors.png" alt="A screengrab from my Rock Paper Scissors web app">
-            <div class="float-text">
-              <h3>Rock Paper Scissors Web App</h3>
-              <h4>&lt;Design, build/&gt;</h4>
-              <p>A simple JavaScript-based web app project</p>
-              <p class="project-links">
-                <a href="">&lt;Info&gt;</a>
-                <a href="https://github.com/seankennelly/Rock-Paper-Scissors">&lt;Github&gt;</a>
-              </p>
-            </div>
-          </div>
-          <div class="project-display">
-            <a href="https://www.witchcraftandvagrancy.com/" target=“_blank” rel="noopener">
-              <img src="images/twava.jpeg"
-                alt="A screengrab of the website for the Brighton folk band 'The Witchcraft & Vagrancy Act'">
-              <div class="float-text">
-                <h3>The Witchcraft & Vagrancy Act</h3>
-                <h4>&lt;Build, hosting, administration/&gt;</h4>
-                <p>A unique project for me as the client already had comprehensive designs. This presented its own
-                  challenges, as I had to reconcile their vision with the practicalities of responsive web design</p>
+                    <button class="nav-link active" id="moonrise-tab-one" data-bs-toggle="tab"
+                      data-bs-target="#nav-moonrise-tab-one" type="button" role="tab"
+                      aria-controls="nav-moonrise-tab-one" aria-selected="true">1</button>
+
+                    <button class="nav-link" id="moonrise-tab-two" data-bs-toggle="tab"
+                      data-bs-target="#nav-moonrise-tab-two" type="button" role="tab"
+                      aria-controls="nav-moonrise-tab-two" aria-selected="false">2</button>
+
+                    <button class="nav-link" id="moonrise-tab-three" data-bs-toggle="tab"
+                      data-bs-target="#nav-moonrise-tab-three" type="button" role="tab"
+                      aria-controls="nav-moonrise-tab-three" aria-selected="false">3</button>
+                  </div>
+                </nav>
+                <!-- Tabs -->
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-moonrise-tab-one" role="tabpanel"
+                    aria-labelledby="moonrise-tab-one" tabindex="0">
+                    <p>
+                      This was my first single-page
+                      project, which
+                      presented new challenges.
+                    </p>
+                    <p>
+                      With plenty of content, my goal was to keep it organised, uncluttered
+                      and
+                      interesting to
+                      look at.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-moonrise-tab-two" role="tabpanel"
+                    aria-labelledby="moonrise-tab-two" tabindex="0">
+                    <p>
+                      To avoid large unbroken chunks of text I used:
+                    </p>
+                    <ul>
+                      <li>
+                        Clearly defined sections, broken up by header images and with alternating colours
+                      </li>
+                      <li>Stylised pull quotes</li>
+                      <li>
+                        Bootstrap accordions and carousel to allow users to interact with information
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="nav-moonrise-tab-three" role="tabpanel"
+                    aria-labelledby="moonrise-tab-three" tabindex="0">
+                    <p>
+                      I discussed and confirmed colour and design conventions with the client, and created a business
+                      logo
+                      for them.
+                    </p>
+                    <p>
+                      I also host the site, and set up a business email address for them.
+                    </p>
+                  </div>
+                </div>
 
               </div>
-            </a>
+            </div>
           </div>
-          <div class="project-display">
-            <a href="https://www.macrotech-contracts.co.uk/" target=“_blank” rel="noopener">
-              <img src="images/macrotech.png" alt="A screengrab of the website for a local construction business">
-              <div class="float-text">
-                <h3>Macrotech Contracts Ltd</h3>
-                <h4>&lt;Design, build, hosting, administration/&gt;</h4>
-                <p>My first major project. Its large site structure and quantity of technical information produced
-                  layout
-                  challenges</p>
+          <!-- FLIP 2: ROCK PAPER SCISSORS -->
+          <div class="project-display" id="rock-paper-scissors-tile">
+            <div class="tile">
+              <div class="front">
+                <img src="./images/rock_paper_scissors.png" alt="A screengrab for my Rock Paper Scissors web app">
+                <div class="float-text">
+                  <h3>Rock Paper Scissors Web App</h3>
+                  <h4>&lt;Design, build/&gt;</h4>
+                  <p>A simple JavaScript-based web app project</p>
+                  <div class="project-links">
+                    <p class="flip-button">&lt;Info&gt;</p>
+                    <a href="https://github.com/seankennelly/Rock-Paper-Scissors">&lt;Github&gt;</a>
+                  </div>
+                </div>
               </div>
-            </a>
-          </div>
-          <div class="project-display">
-            <a href="#" target=“_blank” rel="noopener">
-              <img src="images/sbtb.jpeg" alt="A screengrab for a personal project website about hiking">
-              <div class="float-text">
-                <h3>Saved By The Bush</h3>
-                <h4>&lt;Design, build, hosting, administration/&gt;</h4>
-                <p>A "passion project", this site has been redesigned each time my skillset has been expanded</p>
+              <!-- Back side of tile -->
+              <div class="back">
+                <p class="back-button flip-button">Back</p>
+                <!-- Tab component nav -->
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+                    <button class="nav-link active" id="rps-tab-one" data-bs-toggle="tab"
+                      data-bs-target="#nav-rps-tab-one" type="button" role="tab" aria-controls="nav-rps-tab-one"
+                      aria-selected="true">1</button>
+
+                    <button class="nav-link" id="rps-tab-two" data-bs-toggle="tab" data-bs-target="#nav-rps-tab-two"
+                      type="button" role="tab" aria-controls="nav-rps-tab-two" aria-selected="false">2</button>
+
+                    <button class="nav-link" id="rps-tab-three" data-bs-toggle="tab" data-bs-target="#nav-rps-tab-three"
+                      type="button" role="tab" aria-controls="nav-rps-tab-three" aria-selected="false">3</button>
+                  </div>
+                </nav>
+                <!-- Tabs -->
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-rps-tab-one" role="tabpanel"
+                    aria-labelledby="rps-tab-one" tabindex="0">
+                    <p>
+                      This was my first single-page
+                      project, which
+                      presented new challenges.
+                    </p>
+                    <p>
+                      With plenty of content, my goal was to keep it organised, uncluttered
+                      and
+                      interesting to
+                      look at.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-rps-tab-two" role="tabpanel" aria-labelledby="rps-tab-two"
+                    tabindex="0">
+                    <p>
+                      To avoid large unbroken chunks of text I used:
+                    </p>
+                    <ul>
+                      <li>
+                        Clearly defined sections, broken up by header images and with alternating colours
+                      </li>
+                      <li>Stylised pull quotes</li>
+                      <li>
+                        Bootstrap accordions and carousel to allow users to interact with information
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="nav-rps-tab-three" role="tabpanel" aria-labelledby="rps-tab-three"
+                    tabindex="0">
+                    <p>
+                      I discussed and confirmed colour and design conventions with the client, and created a business
+                      logo
+                      for them.
+                    </p>
+                    <p>
+                      I also host the site, and set up a business email address for them.
+                    </p>
+                  </div>
+                </div>
+
               </div>
-            </a>
+            </div>
           </div>
-          <div class="project-display">
-            <a href="https://www.ivybridgewalkingclub.com/" target=“_blank” rel="noopener">
-              <img src="images/iwc.jpeg" alt="A screengrab for a local walking club's website">
-              <div class="float-text">
-                <h3>Ivybridge Walking Club</h3>
-                <h4>&lt;Built with site-creation platform, administration/&gt;</h4>
-                <p>The challenge with this site was handing it over to its new owners and making sure they could update
-                  and
-                  maintain it. For this purpose I created a detailed 80-page process manual</p>
+          <!-- FLIP 3: TWAVA -->
+          <div class="project-display" id="twava-tile">
+            <div class="tile">
+              <div class="front">
+                <img src="./images/twava.jpeg" alt="A screengrab of the homepage for the Witchcraft and Vagrancy Act">
+                <div class="float-text">
+                  <h3>The Witchcraft & Vagrancy Act</h3>
+                  <h4>&lt;Build, hosting, administration/&gt;</h4>
+                  <p>A unique project for me as the client already had comprehensive designs. This presented its own
+                    challenges, as I had to reconcile their vision with the practicalities of responsive web design</p>
+                  <div class="project-links">
+                    <p class="flip-button">&lt;Info&gt;</p>
+                    <a href="https://www.witchcraftandvagrancy.com/" target=“_blank” rel="noopener">&lt;Page&gt;</a>
+                    <a href="https://github.com/seankennelly/Moonrise-Maternity" target="_blank"
+                      rel="noopener">&lt;Github&gt;</a>
+                  </div>
+                </div>
               </div>
-            </a>
+              <!-- Back side of tile -->
+              <div class="back">
+                <p class="back-button flip-button" id="moonrise-back">Back</p>
+                <!-- Tab component nav -->
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+                    <button class="nav-link active" id="twava-tab-one" data-bs-toggle="tab"
+                      data-bs-target="#nav-twava-tab-one" type="button" role="tab" aria-controls="nav-twava-tab-one"
+                      aria-selected="true">1</button>
+
+                    <button class="nav-link" id="twava-tab-two" data-bs-toggle="tab" data-bs-target="#nav-twava-tab-two"
+                      type="button" role="tab" aria-controls="nav-twava-tab-two" aria-selected="false">2</button>
+
+                    <button class="nav-link" id="twava-tab-three" data-bs-toggle="tab"
+                      data-bs-target="#nav-twava-tab-three" type="button" role="tab" aria-controls="nav-twava-tab-three"
+                      aria-selected="false">3</button>
+                  </div>
+                </nav>
+                <!-- Tabs -->
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-twava-tab-one" role="tabpanel"
+                    aria-labelledby="twava-tab-one" tabindex="0">
+                    <p>
+                      This was my first single-page
+                      project, which
+                      presented new challenges.
+                    </p>
+                    <p>
+                      With plenty of content, my goal was to keep it organised, uncluttered
+                      and
+                      interesting to
+                      look at.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-twava-tab-two" role="tabpanel" aria-labelledby="twava-tab-two"
+                    tabindex="0">
+                    <p>
+                      To avoid large unbroken chunks of text I used:
+                    </p>
+                    <ul>
+                      <li>
+                        Clearly defined sections, broken up by header images and with alternating colours
+                      </li>
+                      <li>Stylised pull quotes</li>
+                      <li>
+                        Bootstrap accordions and carousel to allow users to interact with information
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="nav-twava-tab-three" role="tabpanel" aria-labelledby="twava-tab-three"
+                    tabindex="0">
+                    <p>
+                      I discussed and confirmed colour and design conventions with the client, and created a business
+                      logo
+                      for them.
+                    </p>
+                    <p>
+                      I also host the site, and set up a business email address for them.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
+          <!-- FLIP 4: MACROTECH -->
+          <div class="project-display" id="macrotech-tile">
+            <div class="tile">
+              <div class="front">
+                <img src="./images/macrotech.png" alt="A screengrab of the website for a local construction business">
+                <div class="float-text">
+                  <h3>Macrotech Contracts Ltd</h3>
+                  <h4>&lt;Design, build, hosting, administration/&gt;</h4>
+                  <p>My first major project. Its large site structure and quantity of technical information produced
+                    layout challenges
+                  </p>
+                  <div class="project-links">
+                    <p class="flip-button">&lt;Info&gt;</p>
+                    <a href="https://www.macrotech-contracts.co.uk/" target=“_blank” rel="noopener">&lt;Page&gt;</a>
+                    <a href="#" target="_blank" rel="noopener">&lt;Github&gt;</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Back side of tile -->
+              <div class="back">
+                <p class="back-button flip-button" id="moonrise-back">Back</p>
+                <!-- Tab component nav -->
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+                    <button class="nav-link active" id="macrotech-tab-one" data-bs-toggle="tab"
+                      data-bs-target="#nav-macrotech-tab-one" type="button" role="tab"
+                      aria-controls="nav-macrotech-tab-one" aria-selected="true">1</button>
+
+                    <button class="nav-link" id="macrotech-tab-two" data-bs-toggle="tab"
+                      data-bs-target="#nav-macrotech-tab-two" type="button" role="tab"
+                      aria-controls="nav-macrotech-tab-two" aria-selected="false">2</button>
+
+                    <button class="nav-link" id="macrotech-tab-three" data-bs-toggle="tab"
+                      data-bs-target="#nav-macrotech-tab-three" type="button" role="tab"
+                      aria-controls="nav-macrotech-tab-three" aria-selected="false">3</button>
+                  </div>
+                </nav>
+                <!-- Tabs -->
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-macrotech-tab-one" role="tabpanel"
+                    aria-labelledby="macrotech-tab-one" tabindex="0">
+                    <p>
+                      This was my first single-page
+                      project, which
+                      presented new challenges.
+                    </p>
+                    <p>
+                      With plenty of content, my goal was to keep it organised, uncluttered
+                      and
+                      interesting to
+                      look at.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-macrotech-tab-two" role="tabpanel"
+                    aria-labelledby="macrotech-tab-two" tabindex="0">
+                    <p>
+                      To avoid large unbroken chunks of text I used:
+                    </p>
+                    <ul>
+                      <li>
+                        Clearly defined sections, broken up by header images and with alternating colours
+                      </li>
+                      <li>Stylised pull quotes</li>
+                      <li>
+                        Bootstrap accordions and carousel to allow users to interact with information
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="nav-macrotech-tab-three" role="tabpanel"
+                    aria-labelledby="macrotech-tab-three" tabindex="0">
+                    <p>
+                      I discussed and confirmed colour and design conventions with the client, and created a business
+                      logo
+                      for them.
+                    </p>
+                    <p>
+                      I also host the site, and set up a business email address for them.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- FLIP 5: SAVED BY THE BUSH -->
+          <div class="project-display" id="sbtb-tile">
+            <div class="tile">
+              <div class="front">
+                <img src="./images/sbtb.jpeg" alt="A screengrab for a personal project website about hiking">
+                <div class="float-text">
+                  <h3>Saved By The Bush</h3>
+                  <h4>&lt;Design, build, hosting, administration/&gt;</h4>
+                  <p>A "passion project", this site has been redesigned each time my skillset has been expanded</p>
+                  <div class="project-links">
+                    <p class="flip-button">&lt;Info&gt;</p>
+                    <a href="#" target=“_blank” rel="noopener">&lt;Page&gt;</a>
+                    <a href="#" target="_blank" rel="noopener">&lt;Github&gt;</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Back side of tile -->
+              <div class="back">
+                <p class="back-button flip-button" id="moonrise-back">Back</p>
+                <!-- Tab component nav -->
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+                    <button class="nav-link active" id="sbtb-tab-one" data-bs-toggle="tab" data-bs-target="#nav-sbtb-tab-one"
+                      type="button" role="tab" aria-controls="nav-sbtb-tab-one" aria-selected="true">1</button>
+
+                    <button class="nav-link" id="sbtb-tab-two" data-bs-toggle="tab" data-bs-target="#nav-sbtb-tab-two"
+                      type="button" role="tab" aria-controls="nav-sbtb-tab-two" aria-selected="false">2</button>
+
+                    <button class="nav-link" id="sbtb-tab-three" data-bs-toggle="tab" data-bs-target="#nav-sbtb-tab-three"
+                      type="button" role="tab" aria-controls="nav-sbtb-tab-three" aria-selected="false">3</button>
+                  </div>
+                </nav>
+                <!-- Tabs -->
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-sbtb-tab-one" role="tabpanel" aria-labelledby="sbtb-tab-one"
+                    tabindex="0">
+                    <p>
+                      This was my first single-page
+                      project, which
+                      presented new challenges.
+                    </p>
+                    <p>
+                      With plenty of content, my goal was to keep it organised, uncluttered
+                      and
+                      interesting to
+                      look at.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-sbtb-tab-two" role="tabpanel" aria-labelledby="sbtb-tab-two"
+                    tabindex="0">
+                    <p>
+                      To avoid large unbroken chunks of text I used:
+                    </p>
+                    <ul>
+                      <li>
+                        Clearly defined sections, broken up by header images and with alternating colours
+                      </li>
+                      <li>Stylised pull quotes</li>
+                      <li>
+                        Bootstrap accordions and carousel to allow users to interact with information
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="nav-sbtb-tab-three" role="tabpanel" aria-labelledby="sbtb-tab-three"
+                    tabindex="0">
+                    <p>
+                      I discussed and confirmed colour and design conventions with the client, and created a business
+                      logo
+                      for them.
+                    </p>
+                    <p>
+                      I also host the site, and set up a business email address for them.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- FLIP 6: IVYBRIDGE WALKING CLUB -->
+          <div class="project-display" id="iwc-tile">
+            <div class="tile">
+              <div class="front">
+                <img src="./images/iwc.jpeg" alt="A screengrab for a local walking club's website">
+                <div class="float-text">
+                  <h3>Ivybridge Walking Club</h3>
+                  <h4>&lt;Built with site-creation platform, administration/&gt;</h4>
+                  <p>My task was to build this site then hand it over to its new owners to update
+                    and maintain it. For this purpose I created a detailed 80-page process manual and delivered a
+                    training session.</p>
+                  <div class="project-links">
+                    <p class="flip-button">&lt;Info&gt;</p>
+                    <a href="#" target=“_blank” rel="noopener">&lt;Page&gt;</a>
+                    <a href="#" target="_blank" rel="noopener">&lt;Github&gt;</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Back side of tile -->
+              <div class="back">
+                <p class="back-button flip-button" id="moonrise-back">Back</p>
+                <!-- Tab component nav -->
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+                    <button class="nav-link active" id="iwc-tab-one" data-bs-toggle="tab" data-bs-target="#nav-iwc-tab-one"
+                      type="button" role="tab" aria-controls="nav-iwc-tab-one" aria-selected="true">1</button>
+
+                    <button class="nav-link" id="iwc-tab-two" data-bs-toggle="tab" data-bs-target="#nav-iwc-tab-two"
+                      type="button" role="tab" aria-controls="nav-iwc-tab-two" aria-selected="false">2</button>
+
+                    <button class="nav-link" id="iwc-tab-three" data-bs-toggle="tab" data-bs-target="#nav-iwc-tab-three"
+                      type="button" role="tab" aria-controls="nav-iwc-tab-three" aria-selected="false">3</button>
+                  </div>
+                </nav>
+                <!-- Tabs -->
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-iwc-tab-one" role="tabpanel" aria-labelledby="iwc-tab-one"
+                    tabindex="0">
+                    <p>
+                      This was my first single-page
+                      project, which
+                      presented new challenges.
+                    </p>
+                    <p>
+                      With plenty of content, my goal was to keep it organised, uncluttered
+                      and
+                      interesting to
+                      look at.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-iwc-tab-two" role="tabpanel" aria-labelledby="iwc-tab-two"
+                    tabindex="0">
+                    <p>
+                      To avoid large unbroken chunks of text I used:
+                    </p>
+                    <ul>
+                      <li>
+                        Clearly defined sections, broken up by header images and with alternating colours
+                      </li>
+                      <li>Stylised pull quotes</li>
+                      <li>
+                        Bootstrap accordions and carousel to allow users to interact with information
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="nav-iwc-tab-three" role="tabpanel" aria-labelledby="iwc-tab-three"
+                    tabindex="0">
+                    <p>
+                      I discussed and confirmed colour and design conventions with the client, and created a business
+                      logo
+                      for them.
+                    </p>
+                    <p>
+                      I also host the site, and set up a business email address for them.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
-
-      <!-- NEW NEW SECTION! FLIPCARDS! -->
-
-      <!-- <div class="container">
-        <div class="card">
-          <div class="front"></div>
-          <div class="back">
-            <h1>Back of Card</h1>
-            <p>Additional info on the back of the card</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tile-container">
-        <div class="tile">
-          <div class="front"></div>
-          <div class="back">
-            <h1>Back of Card</h1>
-            <p>Additional info on the back of the card</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tile-container">
-        <div class="tile project display">
-          <div class="front">
-            <img>
-            <div class="float-text">
-              <h3>TEST TILE</h3>
-              <h4>&lt;Design, build, hosting, administration/&gt;</h4>
-              <p>This site makes use of single-page design and Bootstrap components for an elegant way of displaying
-                large
-                amounts of information</p>
-              <p class="project-links">
-                <a href="">&lt;Info&gt;</a>
-                <a href="https://www.moonrisematernity.com/" target=“_blank” rel="noopener">&lt;Page&gt;</a>
-                <a href="https://github.com/seankennelly/Moonrise-Maternity">&lt;Github&gt;</a>
-              </p>
-            </div>
-          </div>
-          <div class="back">
-            <h3>Moonrise Maternity</h3>
-            <p>This project was DOPE</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-display">
-        <img>
-        <div class="float-text">
-          <h3>Moonrise Maternity</h3>
-          <h4>&lt;Design, build, hosting, administration/&gt;</h4>
-          <p>This site makes use of single-page design and Bootstrap components for an elegant way of displaying
-            large
-            amounts of information</p>
-          <p class="project-links">
-            <a href="">&lt;Info&gt;</a>
-            <a href="https://www.moonrisematernity.com/" target=“_blank” rel="noopener">&lt;Page&gt;</a>
-            <a href="https://github.com/seankennelly/Moonrise-Maternity">&lt;Github&gt;</a>
-          </p>
-        </div>
-      </div> -->
-
-      <!-- END FLIPCARDS -->
-
-      <!-- NEW SECTION START -->
-      <section id="anchor-projects"> <!-- Projects -->
-        <div class="projects-wrapper row"> <!-- Not yet flexed! -->
-          <div class="negative-wrapper">
-            <h2 class="negative-content wow animate__animated animate__slideInRight">Project Details</h2>
-          </div>
-
-        </div>
-      </section>
-      <!-- NEW SECTION END -->
 
       <section id="anchor-exp"> <!-- Relevant Experience-->
         <div class="experience row">
@@ -458,7 +777,7 @@
           </h6>
           <div>
             <a href="https://github.com/seankennelly" target="_blank" rel="noopener">
-              <img class="social-icon" src="images/logo_github.png" alt="The logo for the git repository site Github">
+              <img class="social-icon" src="./images/logo_github.png" alt="The logo for the git repository site Github">
             </a>
             <a href="#" target="_blank" rel="noopener">
               <img class="social-icon" src="images/logo_linkedin.png" alt="The logo for the social media site LinkedIn">
@@ -497,7 +816,7 @@
   <!-- Bootstrap JS -->
   <script src="scripts/bootstrap/bootstrap.bundle.min.js"></script>
   <!-- WOW.js (Scroll animations: https://www.delac.io/WOW/) -->
-  <script src="scripts/wow.min.js"></script>
+  <!-- <script src="scripts/wow.min.js"></script>
   <script>
     new WOW().init();
   </script>

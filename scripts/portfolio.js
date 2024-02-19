@@ -18,27 +18,45 @@ const animate = () => {
 }
 meImg.addEventListener('click', animate);
 
+
 // TILE FLIP ANIMATION
-const moonriseInfo = document.getElementById('moonrise-info');
-const moonriseTile = document.getElementById('moonrise-tile');
-const moonriseBack = document.getElementById('moonrise-back');
-
-const moonriseObj = 
-  {
-    info: moonriseInfo,
-    tile: moonriseTile,
-    back: moonriseBack
-  }
-;
-
-const flip = (obj) => { 
-  obj.tile.classList.toggle('flip-container') 
+const moonriseObj = {
+  tile: document.getElementById('moonrise-tile'),
+  flipButtonArray: document.getElementById('moonrise-tile').querySelectorAll('.flip-button'),
+};
+const rockPaperScissorsObj = {
+  tile: document.getElementById('rock-paper-scissors-tile'),
+  flipButtonArray: document.getElementById('rock-paper-scissors-tile').querySelectorAll('.flip-button')
+};
+const twavaObj = {
+  tile: document.getElementById('twava-tile'),
+  flipButtonArray: document.getElementById('twava-tile').querySelectorAll('.flip-button')
+};
+const macrotechObj = {
+  tile: document.getElementById('macrotech-tile'),
+  flipButtonArray: document.getElementById('macrotech-tile').querySelectorAll('.flip-button')
+};
+const sbtbObj = {
+  tile: document.getElementById('sbtb-tile'),
+  flipButtonArray: document.getElementById('sbtb-tile').querySelectorAll('.flip-button')
+};
+const iwcObj = {
+  tile: document.getElementById('iwc-tile'),
+  flipButtonArray: document.getElementById('iwc-tile').querySelectorAll('.flip-button')
 };
 
-moonriseObj.info.addEventListener('click', () => {
-  flip(moonriseObj);
-});
 
-moonriseObj.back.addEventListener('click', () => {
-  flip(moonriseObj);
-});
+const flip = (obj) => {
+  obj.flipButtonArray.forEach(function (button) {
+    button.addEventListener('click', () => {
+      obj.tile.classList.toggle('flip-container');
+    });
+  });
+};
+
+flip(moonriseObj);
+flip(rockPaperScissorsObj);
+flip(twavaObj);
+flip(macrotechObj);
+flip(sbtbObj);
+flip(iwcObj);
