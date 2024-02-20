@@ -188,6 +188,11 @@ section {
 /* --------------
   3. NAV & FOOTER
   --------------*/
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
 
 .navbar .container-fluid {
   padding: 0 1rem 0;
@@ -649,7 +654,7 @@ header p {
   margin: 0 auto 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1070px) {
   .courses-cv-wrapper {
     width: calc(85% + 2rem);
   }
@@ -662,6 +667,10 @@ header p {
 /* ---------------
   Main: 5.4. Courses
   ---------------*/
+section.courses {
+  margin-bottom: 0;
+}
+
 .courses {
   /* So that page view is not disrupted when cycling through carousel elements of varying heights */
   min-height: 691px;
@@ -691,19 +700,36 @@ header p {
 }
 
 .card {
-  max-width: 400px;
+  /* max-width: 400px; */
   margin: 0 auto 2rem;
+}
+
+.card-img-top {
+  max-width: 400px;
+  margin: 0 auto 0;
 }
 
 .card p {
   margin: 1rem auto;
 }
 
+.card h5 {
+  margin: 2rem auto 1rem;
+  font-weight: bold;
+}
+
 .card li {
   margin-left: 1.5rem;
   margin-bottom: 1rem;
-  text-align: left;
-  list-style-type: disc;
+  text-align: center;
+  list-style-type: none;
+}
+
+@media(min-width: 992px) {
+  .card li {
+    text-align: left;
+    list-style-type: disc;
+  }
 }
 
 .card-container .col-12:first-child img,
@@ -727,6 +753,7 @@ header p {
 
 .cv img {
   max-width: 500px;
+  cursor: pointer;
 }
 
 @media(min-width: 992px) {
