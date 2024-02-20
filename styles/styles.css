@@ -6,14 +6,11 @@
 4. HEADER
 5. MAIN:
     5.1. PROJECT DISPLAYS
-    5.2. Project Details
-    5.3. RELEVANT EXPERIENCE
-    5.4. COURSES & CV CONTAINER
-    5.5. COURSES
-    5.6. CV
+    5.2. RELEVANT EXPERIENCE
+    5.3. COURSES & CV CONTAINER
+    5.4. COURSES
+    5.5. CV
 */
-
-
 
 /* -----------
   1. CSS RESET
@@ -360,7 +357,7 @@ header .tagline.negative-content {
 header p {
   width: 90%;
   margin: 1.5rem auto 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: calc(1em + 0.5rem);
 }
 
@@ -377,11 +374,12 @@ header p {
 .project-display {
   position: relative;
   width: 100%;
+  max-width: 400px;
+  height: auto;
   margin: 2.5rem auto 0;
   padding: 0;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.258);
-
-  height: auto;
+  border: grey 1px solid;
   overflow: visible;
 }
 
@@ -390,10 +388,14 @@ header p {
   margin-top: 0;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 850px) {
   .project-display {
     width: 40%;
     margin: 1rem 1rem 1rem;
+    -webkit-box-shadow: 0px 6px 6px 3px rgba(115, 115, 115, 1);
+    -moz-box-shadow: 0px 6px 6px 3px rgba(115, 115, 115, 1);
+    box-shadow: 0px 6px 6px 3px rgba(115, 115, 115, 1);
+    border: none;
   }
 
   .project-display:nth-child(2) {
@@ -419,13 +421,11 @@ header p {
 }
 
 .project-display .float-text {
-  /* width: 70%;  */
-  /* Trying without */
-  transition: .5s ease;
-  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: .5s ease;
+  opacity: 0;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
@@ -444,6 +444,14 @@ header p {
   color: rgb(187, 184, 184);
   font-size: 0.75rem;
   margin-bottom: 0.5rem;
+}
+
+.project-display h4::before {
+  content: '<'
+}
+
+.project-display h4::after {
+  content: '/>';
 }
 
 .project-display p {
@@ -468,11 +476,43 @@ header p {
   color: #669ACD;
 }
 
-.project-links a,
-.project-display .project-links p {
+.project-display .project-links>* {
   margin: 0 0.5rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 300;
+}
+
+.project-display .project-links>*::before {
+  content: '<';
+}
+
+.project-display .project-links>*::after {
+  content: '/>';
+}
+
+
+
+@media(min-width: 850px) {
+
+  .project-display:nth-child(3) .float-text,
+  .project-display:nth-child(6) .float-text {
+    /* For 2nd & 5th tiles with non-conforming links */
+    width: 100%;
+  }
+}
+
+.project-display:nth-child(3) .project-links {
+  /* For Web Apps tile with extra links */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin: 0.5rem auto 0;
+}
+
+.project-display:nth-child(3) .project-links>* {
+  /* For Web Apps tile with extra links */
+  margin: 0.25rem 0.5rem;
 }
 
 /* TILE FLIP 
@@ -536,6 +576,11 @@ header p {
   font-weight: 200;
 }
 
+.tab-content h5 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
 .tab-content p {
   margin-bottom: 0.5rem;
 }
@@ -555,22 +600,17 @@ header p {
   list-style: circle;
 }
 
-
 /* ---------------------------
-  Main: 5.2. Project Details
-  ---------------------------*/
-
-
-/* ---------------------------
-  Main: 5.3. Relevant Experience 
+  Main: 5.2. Relevant Experience 
   ---------------------------*/
 .experience {
   display: flex;
   justify-content: center;
+  font-size: 0.9rem;
 }
 
 .exp-container {
-  margin: 1rem auto 0;
+  margin: 0.75rem auto 0;
   text-align: left;
 }
 
@@ -588,8 +628,7 @@ header p {
 
 .exp-container h3 {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
-
+  font-size: 1.1rem;
 }
 
 .experience ul {
@@ -602,7 +641,7 @@ header p {
 }
 
 /* -------------------------------
-  Main: 5.4. Courses & CV Container
+  Main: 5.3. Courses & CV Container
   ------------------------------- */
 .courses-cv-wrapper {
   display: flex;
@@ -621,7 +660,7 @@ header p {
 }
 
 /* ---------------
-  Main: 5.5. Courses
+  Main: 5.4. Courses
   ---------------*/
 .courses {
   /* So that page view is not disrupted when cycling through carousel elements of varying heights */
@@ -680,7 +719,7 @@ header p {
 }
 
 /* -------------
-  Main: 5.6. C.V
+  Main: 5.5. C.V
   ----------- */
 .cv h2 {
   display: block;

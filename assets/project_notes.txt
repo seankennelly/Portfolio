@@ -1,6 +1,5 @@
 The structure of this website is largely built, but the work is far from over!
 
-1. Saved By The Bush is not yet up
 2. Links in footer are not all valid
 3. LinkedIn isn't even set up yet!
 4. There should be Github repos for most of these projects

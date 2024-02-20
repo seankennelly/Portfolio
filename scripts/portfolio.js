@@ -1,6 +1,5 @@
 // HEADER ANIMATION
 const meImg = document.querySelector("#me-img");
-// Function passes 4 animations to header pic in a loop
 let animationIndex = 0;
 const animate = () => {
   // Removes existing animation class, cycles through animations in array, then resets array index back to 0 after fourth click
@@ -20,43 +19,20 @@ meImg.addEventListener('click', animate);
 
 
 // TILE FLIP ANIMATION
-const moonriseObj = {
-  tile: document.getElementById('moonrise-tile'),
-  flipButtonArray: document.getElementById('moonrise-tile').querySelectorAll('.flip-button'),
-};
-const rockPaperScissorsObj = {
-  tile: document.getElementById('rock-paper-scissors-tile'),
-  flipButtonArray: document.getElementById('rock-paper-scissors-tile').querySelectorAll('.flip-button')
-};
-const twavaObj = {
-  tile: document.getElementById('twava-tile'),
-  flipButtonArray: document.getElementById('twava-tile').querySelectorAll('.flip-button')
-};
-const macrotechObj = {
-  tile: document.getElementById('macrotech-tile'),
-  flipButtonArray: document.getElementById('macrotech-tile').querySelectorAll('.flip-button')
-};
-const sbtbObj = {
-  tile: document.getElementById('sbtb-tile'),
-  flipButtonArray: document.getElementById('sbtb-tile').querySelectorAll('.flip-button')
-};
-const iwcObj = {
-  tile: document.getElementById('iwc-tile'),
-  flipButtonArray: document.getElementById('iwc-tile').querySelectorAll('.flip-button')
-};
-
+const tileIds = ['moonrise', 'web-apps', 'twava', 'macrotech', 'iwc'];
 
 const flip = (obj) => {
-  obj.flipButtonArray.forEach(function (button) {
+  obj.flipButtonArray.forEach(button => {
     button.addEventListener('click', () => {
       obj.tile.classList.toggle('flip-container');
     });
   });
 };
 
-flip(moonriseObj);
-flip(rockPaperScissorsObj);
-flip(twavaObj);
-flip(macrotechObj);
-flip(sbtbObj);
-flip(iwcObj);
+tileIds.forEach(id => {
+  const obj = {
+    tile: document.getElementById(`${id}-tile`),
+    flipButtonArray: document.getElementById(`${id}-tile`).querySelectorAll('.flip-button'),
+  };
+  flip(obj);
+});
