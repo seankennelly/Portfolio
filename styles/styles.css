@@ -294,9 +294,10 @@ footer .links a {
 }
 
 .social-icon {
-  text-align: center;
   width: 25px;
   margin-bottom: 0.5rem;
+  text-align: center;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
