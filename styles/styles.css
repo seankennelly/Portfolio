@@ -12,8 +12,6 @@
     5.5. CV
 */
 
-
-
 /* -----------
   1. CSS RESET
   --------- */
@@ -190,6 +188,11 @@ section {
 /* --------------
   3. NAV & FOOTER
   --------------*/
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
 
 .navbar .container-fluid {
   padding: 0 1rem 0;
@@ -203,7 +206,7 @@ section {
 
 .navbar-brand {
   font-size: calc(0.75rem + 0.5vw);
-}  
+}
 
 nav .links {
   cursor: pointer;
@@ -248,7 +251,7 @@ nav .links .navbar-text:last-of-type::after {
   #email-address {
     margin-top: 0;
     margin-left: 3rem;
-  } 
+  }
 }
 
 footer {
@@ -271,6 +274,7 @@ footer hr {
 }
 
 @media (min-width: 768px) {
+
   /* HR is replaced by border as footer changes orientation */
   footer hr {
     display: none;
@@ -290,9 +294,10 @@ footer .links a {
 }
 
 .social-icon {
-  text-align: center;
   width: 25px;
   margin-bottom: 0.5rem;
+  text-align: center;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -349,7 +354,7 @@ header h1 {
   margin-bottom: 0.5rem;
 }
 
-header .tagline.negative-content{
+header .tagline.negative-content {
   margin: 0 auto 4rem;
   font-size: 1.1rem;
   padding: 0.2rem 0.5rem;
@@ -358,7 +363,7 @@ header .tagline.negative-content{
 header p {
   width: 90%;
   margin: 1.5rem auto 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: calc(1em + 0.5rem);
 }
 
@@ -366,16 +371,22 @@ header p {
   Main: 5.1. Project Displays
   -------------------------- */
 .projects-wrapper {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .project-display {
   position: relative;
   width: 100%;
+  max-width: 400px;
+  height: auto;
   margin: 2.5rem auto 0;
   padding: 0;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.258);
-  cursor: pointer;
+  border: grey 1px solid;
+  overflow: visible;
 }
 
 .project-display:nth-child(2) {
@@ -383,16 +394,20 @@ header p {
   margin-top: 0;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 850px) {
   .project-display {
     width: 40%;
     margin: 1rem 1rem 1rem;
+    -webkit-box-shadow: 0px 6px 6px 3px rgba(115, 115, 115, 1);
+    -moz-box-shadow: 0px 6px 6px 3px rgba(115, 115, 115, 1);
+    box-shadow: 0px 6px 6px 3px rgba(115, 115, 115, 1);
+    border: none;
   }
 
   .project-display:nth-child(2) {
     /* Readjusts margin for first box */
     margin-top: 1rem;
-}
+  }
 }
 
 @media (min-width: 992px) {
@@ -412,12 +427,11 @@ header p {
 }
 
 .project-display .float-text {
-  width: 70%;
-  transition: .5s ease;
-  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: .5s ease;
+  opacity: 0;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
@@ -438,6 +452,14 @@ header p {
   margin-bottom: 0.5rem;
 }
 
+.project-display h4::before {
+  content: '<'
+}
+
+.project-display h4::after {
+  content: '/>';
+}
+
 .project-display p {
   font-size: 0.8rem;
   line-height: 1rem;
@@ -452,11 +474,149 @@ header p {
   opacity: 1;
 }
 
+.project-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: #669ACD;
+}
+
+.project-display .project-links>* {
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.project-display .project-links>*::before {
+  content: '<';
+}
+
+.project-display .project-links>*::after {
+  content: '/>';
+}
+
+
+
+@media(min-width: 850px) {
+
+  .project-display:nth-child(3) .float-text,
+  .project-display:nth-child(6) .float-text {
+    /* For 2nd & 5th tiles with non-conforming links */
+    width: 100%;
+  }
+}
+
+.project-display:nth-child(3) .project-links {
+  /* For Web Apps tile with extra links */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin: 0.5rem auto 0;
+}
+
+.project-display:nth-child(3) .project-links>* {
+  /* For Web Apps tile with extra links */
+  margin: 0.25rem 0.5rem;
+}
+
+/* TILE FLIP 
+  (ALSO USES JS) */
+
+.flip-container>.tile {
+  transform: rotateY(180deg);
+}
+
+.tile {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  z-index: 1;
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  transform: rotateY(180deg);
+  background-color: rgb(47, 47, 47);
+  color: white;
+  overflow: visible;
+}
+
+.back-button {
+  /* margin-bottom: 1rem; */
+  padding: 0.5rem;
+  background-color: #FFFFFF;
+  color: rgb(47, 47, 47);
+  cursor: pointer;
+}
+
+.tab-content {
+  /* margin-top: 1rem; */
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  font-weight: 200;
+}
+
+.tab-content h5 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.tab-content p {
+  margin-bottom: 0.5rem;
+}
+
+.back .nav-link {
+  color: inherit;
+  border-radius: 0;
+}
+
+.back .nav-link:active {
+  background-color: #F5F5F5;
+}
+
+.back li {
+  margin: 0.5rem;
+  text-align: left;
+  list-style: circle;
+}
+
 /* ---------------------------
   Main: 5.2. Relevant Experience 
   ---------------------------*/
+.experience {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
 .exp-container {
-  margin: 1rem auto 0;
+  margin: 0.75rem auto 0;
   text-align: left;
 }
 
@@ -474,8 +634,7 @@ header p {
 
 .exp-container h3 {
   margin-bottom: 1rem;
-  font-size: 1.25rem;
-
+  font-size: 1.1rem;
 }
 
 .experience ul {
@@ -491,13 +650,15 @@ header p {
   Main: 5.3. Courses & CV Container
   ------------------------------- */
 .courses-cv-wrapper {
+  display: flex;
+  justify-content: center;
   margin: 0 auto 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1070px) {
   .courses-cv-wrapper {
     width: calc(85% + 2rem);
-}
+  }
 
   .courses-cv-wrapper h2.negative-content {
     width: calc(80% + 4rem);
@@ -507,6 +668,10 @@ header p {
 /* ---------------
   Main: 5.4. Courses
   ---------------*/
+section.courses {
+  margin-bottom: 0;
+}
+
 .courses {
   /* So that page view is not disrupted when cycling through carousel elements of varying heights */
   min-height: 691px;
@@ -522,7 +687,7 @@ header p {
     width: calc(80% + 2rem);
   }
 }
-  
+
 @media(min-width: 992px) {
   .card-container {
     width: calc(75% + 4rem);
@@ -536,22 +701,39 @@ header p {
 }
 
 .card {
-  max-width: 400px;
+  /* max-width: 400px; */
   margin: 0 auto 2rem;
+}
+
+.card-img-top {
+  max-width: 400px;
+  margin: 0 auto 0;
 }
 
 .card p {
   margin: 1rem auto;
 }
 
+.card h5 {
+  margin: 2rem auto 1rem;
+  font-weight: bold;
+}
+
 .card li {
   margin-left: 1.5rem;
   margin-bottom: 1rem;
-  text-align: left;
-  list-style-type: disc;
+  text-align: center;
+  list-style-type: none;
 }
 
-.card-container .col-12:first-child img, 
+@media(min-width: 992px) {
+  .card li {
+    text-align: left;
+    list-style-type: disc;
+  }
+}
+
+.card-container .col-12:first-child img,
 .carousel-item:first-child img {
   /* Padding around Kent logo */
   padding: 1rem 1rem 0;
@@ -569,8 +751,10 @@ header p {
 .cv h2 {
   display: block;
 }
+
 .cv img {
   max-width: 500px;
+  cursor: pointer;
 }
 
 @media(min-width: 992px) {

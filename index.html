@@ -8,9 +8,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
   <!-- Google Font: Roboto & IBM Plex Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +19,7 @@
   <!-- Animate CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- My Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
   <title>Seán Kennelly | Portfolio</title>
 </head>
 
@@ -56,200 +55,629 @@
       <p class="tagline negative-content">Web Developer</p>
       <p>Having worked in live music for years, I decided on a career move into Web Development. After studying in
         Australia, I moved back to the UK to continue my growth as a developer. My project experience so far has seen me
-        launch seven websites (including this one). I'm inspired by diverse design, exciting digital experiences, and
-        inclusive products. In my free time I'm usually working on my latest  album of rowdy music.</p>
+        launch four websites (including this one). I'm inspired by diverse design, exciting digital experiences, and
+        inclusive products. In my free time I'm usually working on my latest album of rowdy music.</p>
     </header>
 
     <main>
       <section id="anchor-projects"> <!-- Projects -->
-        <div class="projects-wrapper row d-flex justify-content-center">
+        <div class="projects-wrapper row">
           <div class="negative-wrapper">
             <h2 class="negative-content wow animate__animated animate__slideInRight">Projects</h2>
           </div>
-          <!-- PROJECT DISPLAYS -->
-          <div class="project-display">
-            <a href="https://www.moonrisematernity.com/" target=“_blank” rel="noopener">
-              <img src="images/moonrise.jpeg" alt="A screengrab of the website 'Moonrise Maternity'">
-              <div class="float-text">
-                <h3>Moonrise Maternity</h3>
-                <h4>&lt;Design, build, hosting, administration/&gt;</h4>
-                <p>This site makes use of single-page design and Bootstrap components for an elegant way of displaying
-                  large
-                  amounts of information</p>
+          <!-- FLIP 1: MOONRISE -->
+          <div class="project-display" id="moonrise-tile">
+            <div class="tile">
+              <div class="front">
+                <img src="./images/moonrise.jpeg" alt="A screengrab of the homepage for Moonrise Maternity">
+                <div class="float-text">
+                  <h3>Moonrise Maternity</h3>
+                  <h4>Design, Build, Hosting, Administration</h4>
+                  <p>This site makes use of single-page design and Bootstrap components for an elegant way of displaying
+                    large
+                    amounts of information</p>
+                  <div class="project-links">
+                    <p class="flip-button">Info</p>
+                    <a href="https://www.moonrisematernity.com/" target=“_blank” rel="noopener">Page</a>
+                    <a href="https://github.com/seankennelly/Moonrise_Maternity" target="_blank"
+                      rel="noopener">Github</a>
+                  </div>
+                </div>
               </div>
-            </a>
+              <!-- Back side of tile -->
+              <div class="back">
+                <p class="back-button flip-button">Back</p>
+                <!-- Tab component nav -->
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="moonrise-tab-one" data-bs-toggle="tab"
+                      data-bs-target="#nav-moonrise-tab-one" type="button" role="tab"
+                      aria-controls="nav-moonrise-tab-one" aria-selected="true">1
+                    </button>
+                    <button class="nav-link" id="moonrise-tab-two" data-bs-toggle="tab"
+                      data-bs-target="#nav-moonrise-tab-two" type="button" role="tab"
+                      aria-controls="nav-moonrise-tab-two" aria-selected="false">2
+                    </button>
+                    <button class="nav-link" id="moonrise-tab-three" data-bs-toggle="tab"
+                      data-bs-target="#nav-moonrise-tab-three" type="button" role="tab"
+                      aria-controls="nav-moonrise-tab-three" aria-selected="false">3
+                    </button>
+                  </div>
+                </nav>
+                <!-- Tabs -->
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-moonrise-tab-one" role="tabpanel"
+                    aria-labelledby="moonrise-tab-one" tabindex="0">
+                    <p>
+                      This was my first single-page
+                      project, which
+                      presented new challenges.
+                    </p>
+                    <p>
+                      With plenty of content, my goal was to keep it organised, uncluttered
+                      and
+                      interesting to
+                      look at.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-moonrise-tab-two" role="tabpanel"
+                    aria-labelledby="moonrise-tab-two" tabindex="0">
+                    <p>
+                      To avoid large unbroken chunks of text I used:
+                    </p>
+                    <ul>
+                      <li>
+                        Clearly defined sections broken up by header images and with alternating colours
+                      </li>
+                      <li>Stylised pull quotes</li>
+                      <li>
+                        Bootstrap accordions and carousel to allow users to interact with information
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-pane fade" id="nav-moonrise-tab-three" role="tabpanel"
+                    aria-labelledby="moonrise-tab-three" tabindex="0">
+                    <p>
+                      I discussed and confirmed colour and design conventions with the client, and created a business
+                      logo
+                      for them.
+                    </p>
+                    <p>
+                      I also host the site, and set up a business email address for them.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
-          <div class="project-display">
-            <a href="https://www.witchcraftandvagrancy.com/" target=“_blank” rel="noopener">
-              <img src="images/twava.jpeg"
-                alt="A screengrab of the website for the Brighton folk band 'The Witchcraft & Vagrancy Act'">
-              <div class="float-text">
-                <h3>The Witchcraft & Vagrancy Act</h3>
-                <h4>&lt;Build, hosting, administration/&gt;</h4>
-                <p>A unique project for me as the client already had comprehensive designs. This presented its own
-                  challenges, as I had to reconcile their vision with the practicalities of responsive web design</p>
+          <!-- FLIP 2: WEB APPS -->
+          <div class="project-display" id="web-apps-tile">
+            <div class="tile">
+              <div class="front">
+                <img src="./images/web_apps.png" alt="A screengrab of various web apps I have made">
+                <div class="float-text">
+                  <h3>Various Web Apps</h3>
+                  <h4>Design, Build</h4>
+                  <p>A collection of various JavaScript-based web apps</p>
+                  <div class="project-links">
+                    <p class="flip-button">Info</p>
+                    <a href="https://github.com/seankennelly/Rock_Paper_Scissors" target=“_blank” rel="noopener">Github:
+                      Rock Paper
+                      Scissors</a>
+                    <a href="https://github.com/seankennelly/Outback_Jumping_Game" target=“_blank”
+                      rel="noopener">Github: Jumping Game</a>
+                    <a href="https://github.com/seankennelly/Calculator_App" target=“_blank” rel="noopener">Github:
+                      Calculator</a>
+                  </div>
+                </div>
               </div>
-            </a>
+              <!-- Back side of tile -->
+              <div class="back">
+                <p class="back-button flip-button">Back</p>
+                <!-- Tab component nav -->
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="web-apps-tab-one" data-bs-toggle="tab"
+                      data-bs-target="#nav-web-apps-tab-one" type="button" role="tab"
+                      aria-controls="nav-web-apps-tab-one" aria-selected="true">1
+                    </button>
+                    <button class="nav-link" id="web-apps-tab-two" data-bs-toggle="tab"
+                      data-bs-target="#nav-web-apps-tab-two" type="button" role="tab"
+                      aria-controls="nav-web-apps-tab-two" aria-selected="false">2
+                    </button>
+                    <button class="nav-link" id="web-apps-tab-three" data-bs-toggle="tab"
+                      data-bs-target="#nav-web-apps-tab-three" type="button" role="tab"
+                      aria-controls="nav-web-apps-tab-three" aria-selected="false">3
+                    </button>
+                    <button class="nav-link" id="web-apps-tab-three" data-bs-toggle="tab"
+                      data-bs-target="#nav-web-apps-tab-four" type="button" role="tab"
+                      aria-controls="nav-web-apps-tab-four" aria-selected="false">4
+                    </button>
+                  </div>
+                </nav>
+                <!-- Tabs -->
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-web-apps-tab-one" role="tabpanel"
+                    aria-labelledby="web-apps-tab-one" tabindex="0">
+                    <p>
+                      During my Frontend Developer Course with Kreativstorm I built several web apps. Each game me
+                      opportunities for new learning experiences.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-web-apps-tab-two" role="tabpanel"
+                    aria-labelledby="web-apps-tab-two" tabindex="0">
+                    <h5>
+                      Rock Paper Scissors Game
+                    </h5>
+                    <p>
+                      I was tasked with building a text-based version of this game, and having completed that took the
+                      opportunity to remake the app, making use of the DOM manipulation techniques I have learned during
+                      my other
+                      studies.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-web-apps-tab-three" role="tabpanel"
+                    aria-labelledby="web-apps-tab-three" tabindex="0">
+                    <h5>
+                      Jumping Game
+                    </h5>
+                    <p>
+                      This game made use of CSS animations, with game functionality based in JavaScript. JS randomly
+                      generates obstacles, starts timers, and initiates CSS animations.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-web-apps-tab-four" role="tabpanel"
+                    aria-labelledby="web-apps-tab-four" tabindex="0">
+                    <h5>Calculator App</h5>
+                    <p>
+                      This was my second version of a calculator app, making use of my latest proficencies. It features
+                      mouse and keyboard support. The core of the code was adapted from a tutorial, but has features
+                      that I introduced myself.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="project-display">
-            <a href="https://www.macrotech-contracts.co.uk/" target=“_blank” rel="noopener">
-              <img src="images/macrotech.png" alt="A screengrab of the website for a local construction business">
-              <div class="float-text">
-                <h3>Macrotech Contracts Ltd</h3>
-                <h4>&lt;Design, build, hosting, administration/&gt;</h4>
-                <p>My first major project. Its large site structure and quantity of technical information produced
-                  layout
-                  challenges</p>
+          <!-- FLIP 3: TWAVA -->
+          <div class="project-display" id="twava-tile">
+            <div class="tile">
+              <div class="front">
+                <img src="./images/twava.jpeg" alt="A screengrab of the homepage for the Witchcraft and Vagrancy Act">
+                <div class="float-text">
+                  <h3>The Witchcraft & Vagrancy Act</h3>
+                  <h4>Build, Hosting, Administration</h4>
+                  <p>A unique project for me as the client already had comprehensive designs. This presented its own
+                    challenges, as I had to reconcile their vision with the practicalities of responsive web design</p>
+                  <div class="project-links">
+                    <p class="flip-button">Info</p>
+                    <a href="https://www.witchcraftandvagrancy.com/" target=“_blank” rel="noopener">Page</a>
+                    <a href="https://github.com/seankennelly/the-witchcraft-and-vagrancy-act" target="_blank"
+                      rel="noopener">Github</a>
+                  </div>
+                </div>
               </div>
-            </a>
+              <!-- Back side of tile -->
+              <div class="back">
+                <p class="back-button flip-button" id="moonrise-back">Back</p>
+                <!-- Tab component nav -->
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="twava-tab-one" data-bs-toggle="tab"
+                      data-bs-target="#nav-twava-tab-one" type="button" role="tab" aria-controls="nav-twava-tab-one"
+                      aria-selected="true">1
+                    </button>
+                    <button class="nav-link" id="twava-tab-two" data-bs-toggle="tab" data-bs-target="#nav-twava-tab-two"
+                      type="button" role="tab" aria-controls="nav-twava-tab-two" aria-selected="false">2
+                    </button>
+                    <button class="nav-link" id="twava-tab-three" data-bs-toggle="tab"
+                      data-bs-target="#nav-twava-tab-three" type="button" role="tab" aria-controls="nav-twava-tab-three"
+                      aria-selected="false">3
+                    </button>
+                  </div>
+                </nav>
+                <!-- Tabs -->
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-twava-tab-one" role="tabpanel"
+                    aria-labelledby="twava-tab-one" tabindex="0">
+                    <p>
+                      The client presented comprehensive designs based around a desktop layout. I adapted them to be
+                      mobile-first with cross-browser compatibility.
+                    </p>
+                    <p>
+                      Communication with the client was paramount, ensuring that the smaller-screen designs fit with
+                      their original vision.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-twava-tab-two" role="tabpanel" aria-labelledby="twava-tab-two"
+                    tabindex="0">
+                    <p>
+                      The site was principally built with Bootstrap and Flexbox.
+                    </p>
+                    <p>Initially I found the high-quality images to be slowing the site considerably, but learned to
+                      minimise file sizes during this project.</p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-twava-tab-three" role="tabpanel" aria-labelledby="twava-tab-three"
+                    tabindex="0">
+                    <p>
+                      I host and administer this site for the client, and will continue to update and maintain it.
+                    </p>
+                    <p>
+                      During the course of launching this site I learned how to register and apply an SSL certificate.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
-          <div class="project-display">
-            <a href="#" target=“_blank” rel="noopener">
-              <img src="images/sbtb.jpeg" alt="A screengrab for a personal project website about hiking">
-              <div class="float-text">
-                <h3>Saved By The Bush</h3>
-                <h4>&lt;Design, build, hosting, administration/&gt;</h4>
-                <p>A "passion project", this site has been redesigned each time my skillset has been expanded</p>
+          <!-- FLIP 4: MACROTECH -->
+          <div class="project-display" id="macrotech-tile">
+            <div class="tile">
+              <div class="front">
+                <img src="./images/macrotech.png" alt="A screengrab of the website for a local construction business">
+                <div class="float-text">
+                  <h3>Macrotech Contracts Ltd</h3>
+                  <h4>Design, Build, Hosting, Administration</h4>
+                  <p>My first major project. Its large site structure and quantity of technical information produced
+                    layout challenges
+                  </p>
+                  <div class="project-links">
+                    <p class="flip-button">Info</p>
+                    <a href="https://www.macrotech-contracts.co.uk/" target=“_blank” rel="noopener">Page</a>
+                    <a href="https://github.com/seankennelly/Macrotech_Contracts" target="_blank"
+                      rel="noopener">Github</a>
+                  </div>
+                </div>
               </div>
-            </a>
+              <!-- Back side of tile -->
+              <div class="back">
+                <p class="back-button flip-button" id="moonrise-back">Back</p>
+                <!-- Tab component nav -->
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="macrotech-tab-one" data-bs-toggle="tab"
+                      data-bs-target="#nav-macrotech-tab-one" type="button" role="tab"
+                      aria-controls="nav-macrotech-tab-one" aria-selected="true">1
+                    </button>
+                    <button class="nav-link" id="macrotech-tab-two" data-bs-toggle="tab"
+                      data-bs-target="#nav-macrotech-tab-two" type="button" role="tab"
+                      aria-controls="nav-macrotech-tab-two" aria-selected="false">2
+                    </button>
+                    <button class="nav-link" id="macrotech-tab-three" data-bs-toggle="tab"
+                      data-bs-target="#nav-macrotech-tab-three" type="button" role="tab"
+                      aria-controls="nav-macrotech-tab-three" aria-selected="false">3
+                    </button>
+                    <button class="nav-link" id="macrotech-tab-four" data-bs-toggle="tab"
+                      data-bs-target="#nav-macrotech-tab-four" type="button" role="tab"
+                      aria-controls="nav-macrotech-tab-four" aria-selected="false">4
+                    </button>
+                  </div>
+                </nav>
+                <!-- Tabs -->
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-macrotech-tab-one" role="tabpanel"
+                    aria-labelledby="macrotech-tab-one" tabindex="0">
+                    <p>
+                      This was the first site I launched, and as expected there were many obstacles to overcome.
+                    </p>
+                    <p>
+                      I began building this site before I was aware of responsive design. Once it was completed it had
+                      to be scrapped and begun again.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-macrotech-tab-two" role="tabpanel"
+                    aria-labelledby="macrotech-tab-two" tabindex="0">
+                    <p>
+                      Hosting the site presented numerous difficulties.
+                    </p>
+                    <p>
+                      Transferring the domain to a new site and
+                      hosting service was complex, as the previous host was a small local company that
+                      had largely moved on from web hosting.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-macrotech-tab-three" role="tabpanel"
+                    aria-labelledby="macrotech-tab-three" tabindex="0">
+                    <p>
+                      The website I had replaced was not secured and was badly built, so was inaccessible by search
+                      engines. Getting the new site to appear in search results provided many more unexpected learning
+                      opportunities and taught me a lot about SEO.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-macrotech-tab-four" role="tabpanel"
+                    aria-labelledby="macrotech-tab-four" tabindex="0">
+                    <p>
+                      The client and I went through the previous site, saving and rejecting
+                      content for the new site. My designs conformed to their company branding.
+                    </p>
+                    <p>
+                      Unfortunately they were unable to provide updated photos, so the layout was restricted by small
+                      images that could not be sized too large.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="project-display">
-            <a href="https://www.ivybridgewalkingclub.com/" target=“_blank” rel="noopener">
-              <img src="images/iwc.jpeg" alt="A screengrab for a local walking club's website">
-              <div class="float-text">
-                <h3>Ivybridge Walking Club</h3>
-                <h4>&lt;Built with site-creation platform, administration/&gt;</h4>
-                <p>The challenge with this site was handing it over to its new owners and making sure they could update
-                  and
-                  maintain it. For this purpose I created a detailed 80-page process manual</p>
+          <!-- FLIP 5: IVYBRIDGE WALKING CLUB -->
+          <div class="project-display" id="iwc-tile">
+            <div class="tile">
+              <div class="front">
+                <img src="./images/iwc.jpeg" alt="A screengrab for a local walking club's website">
+                <div class="float-text">
+                  <h3>Ivybridge Walking Club</h3>
+                  <h4>Build (using a site-creation platform), Administration, Handover</h4>
+                  <p>I was hired was to overhaul this site then hand it back to the club to update
+                    and maintain it. For this purpose I created a detailed 80-page process manual and delivered a
+                    training session.</p>
+                  <div class="project-links">
+                    <p class="flip-button">Info</p>
+                    <a href="https://www.ivybridgewalkingclub.com/" target=“_blank” rel="noopener">Page</a>
+                  </div>
+                </div>
               </div>
-            </a>
-          </div>
-          <div class="project-display">
-            <a href="https://www.shufflethedeck.co.uk/" target=“_blank” rel="noopener">
-              <img src="images/shuffle.png" alt="A screengrab for a local dance troup's website">
-              <div class="float-text">
-                <h3>Shuffle The Deck Dancers</h3>
-                <h4>&lt;Built with site-creation platform, administration/&gt;</h4>
-                <p>A small and simple project that gave me experience dealing with clients</p>
+              <!-- Back side of tile -->
+              <div class="back">
+                <p class="back-button flip-button" id="moonrise-back">Back</p>
+                <!-- Tab component nav -->
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="iwc-tab-one" data-bs-toggle="tab"
+                      data-bs-target="#nav-iwc-tab-one" type="button" role="tab" aria-controls="nav-iwc-tab-one"
+                      aria-selected="true">1
+                    </button>
+                    <button class="nav-link" id="iwc-tab-two" data-bs-toggle="tab" data-bs-target="#nav-iwc-tab-two"
+                      type="button" role="tab" aria-controls="nav-iwc-tab-two" aria-selected="false">2
+                    </button>
+                    <button class="nav-link" id="iwc-tab-three" data-bs-toggle="tab" data-bs-target="#nav-iwc-tab-three"
+                      type="button" role="tab" aria-controls="nav-iwc-tab-three" aria-selected="false">3
+                    </button>
+                    <button class="nav-link" id="iwc-tab-four" data-bs-toggle="tab" data-bs-target="#nav-iwc-tab-four"
+                      type="button" role="tab" aria-controls="nav-iwc-tab-four" aria-selected="false">4
+                    </button>
+                  </div>
+                </nav>
+                <!-- Tabs -->
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-iwc-tab-one" role="tabpanel"
+                    aria-labelledby="iwc-tab-one" tabindex="0">
+                    <p>
+                      To keep costs down for the club I built the site using a free site-building platform.
+                    </p>
+                    <p>
+                      The challenge of this job was ensuring the club could maintain the website once I had handed it
+                      over to them, as the club's board are of a generation that is not confident with technology.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-iwc-tab-two" role="tabpanel" aria-labelledby="iwc-tab-two"
+                    tabindex="0">
+                    <p>
+                      To assist them I created a detailed process manual to follow. The processes are broken down into
+                      clear instructions, with screenshots and highlights for ease of use. I made no assumptions about
+                      the user's abilities or foreknowledge of common UI standards.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-iwc-tab-three" role="tabpanel" aria-labelledby="iwc-tab-three"
+                    tabindex="0">
+                    <p>
+                      The board was initially intimidated by the process manual, so I delivered a training session for
+                      them. I discussed the manual's structure and uses, demonstrated processes, and answered all
+                      questions put to me by the board.
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-iwc-tab-four" role="tabpanel" aria-labelledby="iwc-tab-four"
+                    tabindex="0">
+                    <p>
+                      This job had very positive outcomes. The board were very happy with the training session and
+                      manual, and I was able to
+                      successfully hand over the running of the site to them.
+                    </p>
+                  </div>
+                </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="anchor-exp"> <!-- Relevant Experience-->
-        <div class="experience row d-flex justify-content-center">
+        <div class="experience row">
           <h2 class="negative-content wow animate__animated animate__slideInRight">Relevant Experience</h2>
-
-          <div class="exp-container col-12 col-lg-6 col-xl-4">
+          <div class="exp-container col-12">
             <h3>Design & Build</h3>
             <ul>
-              <li>Designed four active sites</li>
-              <li>Built five active sites</li>
-              <li>Used Bootstrap for responsive design</li>
+              <li>Designed and built four active sites</li>
+              <li>Use of Flexbox and Bootstrap for responsive design</li>
+              <li>Use of JavaScript for dynamic sites</li>
+              <li>Augmented SEO with observable results</li>
             </ul>
             <hr>
           </div>
-
-          <div class="exp-container col-12 col-lg-6 col-xl-4">
+          <div class="exp-container col-12">
+            <h3>Collaboration</h3>
+            <ul>
+              <li>Worked with groups to collaborate on and build sites and web apps</li>
+              <li>Assisted peers with personal work and delegated group work</li>
+              <li>Participated in group meetings to organise approaches to projects</li>
+              <li>Used shared Github repos
+                <ul>
+                  <li>Use of branches to keep work separate</li>
+                  <li>Protecting branches</li>
+                  <li>Merging branches</li>
+                  <li>Deployments</li>
+                </ul>
+              </li>
+              <li>Co-operatively presented work to tutor</li>
+            </ul>
+            <hr>
+          </div>
+          <div class="exp-container col-12">
             <h3>Working With Clients</h3>
             <ul>
-              <li>Met with clients to discuss project objectives, client needs and project scopes</li>
+              <li> Met with clients to discuss project objectives, client needs and project scopes</li>
               <li>Provided clients with designs and documentation</li>
               <li>Completed projects to the satisfaction of clients</li>
               <li>Invoiced clients and provided them with website analytics</li>
             </ul>
             <hr>
           </div>
-
-          <div class="exp-container col-12 col-lg-6 col-xl-4">
+          <div class="exp-container col-12">
             <h3>Administration</h3>
             <ul>
-              <li>Management of hosting on behalf of clients</li>
+              <li>Management of hosting and domains on behalf of clients</li>
               <li>Use of FTP to upload and manage site files</li>
-              <li>Purchasing of Domains on behalf of clients</li>
-              <li>Purchasing and application of SSL certificates</li>
-              <li>Currently administer seven active sites</li>
+              <li>Registration and application of SSL certificates</li>
+              <li>Currently administer six active sites</li>
             </ul>
           </div>
         </div>
-
       </section>
 
-      <div class="courses-cv-wrapper row d-flex justify-content-center">
+      <div class="courses-cv-wrapper row">
         <div class="col-12 col-lg-6 justify-content-center p-0">
           <section class="courses" id="anchor-courses"> <!-- Courses -->
             <h2 class="negative-content wow animate__animated animate__slideInLeft">Courses</h2>
             <!-- Non carousel display (small screens) -->
             <div class="card-container row d-lg-none">
-
-              <div class="col-12 col-lg-4">
-
-                <div class="card">
-                  <img src="images/kent.png" class="card-img-top" alt="The logo for the Kent Institute Australia">
-                  <div class="card-body">
-                    <!-- <h5 class="card-title">Kent Institute</h5> -->
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Sydney, Australia</h6>
-                    <p class="card-text">Full time vocational course that covered many diverse aspects of Web
-                      and Software Development, including (but not limited to):</p>
-                    <ul>
-                      <li>Coding languages (HTML, CSS, JavaScript, Python, PHP, SQL)</li>
-                      <li>Real-world projects including websites, databases and hosting</li>
-                      <li>Development of UI and UX</li>
-                      <li>Application of SEO</li>
-                      <li>Client-based approaches to projects</li>
-                    </ul>
-                    <a href="https://kent.edu.au/" class="btn btn-light">Kent Institute</a>
-                  </div>
+              <div class="card col-12 col-lg-4"> <!-- Kreativstorm-->
+                <img src="./images/kreativstorm.png" class="card-img-top" alt="The logo for Kreativstorm">
+                <div class="card-body">
+                  <p>
+                    I participated in a four week intensive course run by Kreativstorm. All projects were held to a high
+                    standard by the
+                    tutor, who rejected work that he felt would not be acceptable in a professional setting.
+                  </p>
+                  <p>
+                    I was reacquainted with HTML and CSS, which served to reinforce good semantic practice and challenge
+                    some bad habits I
+                    had picked up.
+                  </p>
+                  <p>
+                    I was given JavaScript projects which challenged my abilities. Work that was functional but did not
+                    adhere to best
+                    practices was rejected, redone, and refactored until considered a professional standard.
+                  </p>
+                  <p>
+                    I encountered real-world experience of working with peers and in groups. Collaborative work gave me
+                    insight into
+                    different modes of thinking, encouraged me to co-operate with others on tasks, and led to regular
+                    exchanges of work and
+                    ideas. It also gave me a first-time experience of working with shared Github repos, including
+                    branching, merging and
+                    deploying work.
+                  </p>
+                  <p>
+                    As part of this course I produced three web apps which are included in my projects above.
+                  </p>
+                  <a href="https://www.kreativstorm.de/" target="_blank" rel="noopener"
+                    class="btn btn-light">Kreativstorm</a>
                 </div>
               </div>
-
-              <div class="col-12 col-lg-4">
-                <div class="card">
-                  <img src="images/codecademy.png" class="card-img-top"
-                    alt="The logo for the learning resource website Codecademy">
-                  <div class="card-body">
-                    <!-- <h5 class="card-title">Codecademy</h5> -->
-                    <p class="card-text">Through Codecademy I have completed the following courses:</p>
-                    <ul>
-                      <li>Learn HTML</li>
-                      <li>Learn CSS</li>
-                      <li>Learn JavaScript</li>
-                    </ul>
-                    <p>I am currently working on the Full Stack Engineer career path course.</p>
-                  </div>
+              <div class="card col-12 col-lg-4"> <!-- Kent-->
+                <img src="images/kent.png" class="card-img-top" alt="The logo for the Kent Institute Australia">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Sydney, Australia</h6>
+                  <p>Full time vocational course that covered many diverse aspects of Web
+                    and Software Development, including (but not limited to):</p>
+                  <ul>
+                    <li>Coding languages (HTML, CSS, JavaScript, Python, PHP, SQL)</li>
+                    <li>Real-world projects including websites, databases and hosting</li>
+                    <li>Development of UI and UX</li>
+                    <li>Application of SEO</li>
+                    <li>Client-based approaches to projects</li>
+                  </ul>
+                  <a href="https://kent.edu.au/" target="_blank" rel="noopener" class="btn btn-light">Kent Institute</a>
                 </div>
               </div>
-
-              <div class="col-12 col-lg-4">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Kreativestorm</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                      card's
-                      content.</p>
-                  </div>
+              <div class="card col-12 col-lg-4"> <!-- Codecademy-->
+                <img src="images/codecademy.png" class="card-img-top"
+                  alt="The logo for the learning resource website Codecademy">
+                <div class="card-body">
+                  <p>I am currently studying the Full Stack Engineer career path course.</p>
+                  <h5>Technical Skills Practiced Through Codecadmy:</h5>
+                  <ul>
+                    <li>HTML: Advanced</li>
+                    <li>CSS: Advanced</li>
+                    <li>JavaScript: Proficient</li>
+                    <li>React: Beginner</li>
+                  </ul>
+                  <h5>Recent Projects:</h5>
+                  <ul>
+                    <li>Deploying React App with Netlify</li>
+                    <li>Spotify API Manipulation with React</li>
+                    <li>DOM manipulation with JS</li>
+                  </ul>
+                  <h5>Certifications:</h5>
+                  <ul>
+                    <li>Learn HTML</li>
+                    <li>Learn CSS</li>
+                    <li>Learn JavaScript</li>
+                  </ul>
                 </div>
               </div>
             </div>
             <!-- Carousel display (large screens)-->
             <div id="carouselExampleIndicators" class="carousel slide d-none d-lg-block" data-bs-theme="dark">
               <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
               </div>
               <div class="carousel-inner">
                 <!-- Card 1 -->
                 <div class="carousel-item active" data-bs-theme="light">
                   <div class="card">
+                    <img src="./images/kreativstorm.png" class="card-img-top" alt="The logo for Kreativstorm">
+                    <div class="card-body">
+                      <p>
+                        I participated in a four week intensive course run by Kreativstorm. All projects were held to a
+                        high
+                        standard by the
+                        tutor, who rejected work that he felt would not be acceptable in a professional setting.
+                      </p>
+                      <p>
+                        I was reacquainted with HTML and CSS, which served to reinforce good semantic practice and
+                        challenge
+                        some bad habits I
+                        had picked up.
+                      </p>
+                      <p>
+                        I was given JavaScript projects which challenged my abilities. Work that was functional but did
+                        not
+                        adhere to best
+                        practices was rejected, redone, and refactored until considered a professional standard.
+                      </p>
+                      <p>
+                        I encountered real-world experience of working with peers and in groups. Collaborative work gave
+                        me
+                        insight into
+                        different modes of thinking, encouraged me to co-operate with others on tasks, and led to
+                        regular
+                        exchanges of work and
+                        ideas. It also gave me a first-time experience of working with shared Github repos, including
+                        branching, merging and
+                        deploying work.
+                      </p>
+                      <p>
+                        As part of this course I produced three web apps which are included in my projects above.
+                      </p>
+                      <a href="https://www.kreativstorm.de/" target="_blank" rel="noopener"
+                        class="btn btn-light">Kreativstorm</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="carousel-item" data-bs-theme="light">
+                  <div class="card">
                     <img src="images/kent.png" class="card-img-top" alt="The logo for the Kent Institute Australia">
                     <div class="card-body">
-                      <!-- <h5 class="card-title">Kent Institute</h5> -->
                       <h6 class="card-subtitle mb-2 text-body-secondary">Sydney, Australia</h6>
-                      <p class="card-text">Full time vocational course that covered many diverse aspects of Web
+                      <p>Full time vocational course that covered many diverse aspects of Web
                         and Software Development, including (but not limited to):</p>
                       <ul>
                         <li>Coding languages (HTML, CSS, JavaScript, Python, PHP, SQL)</li>
@@ -258,45 +686,48 @@
                         <li>Application of SEO</li>
                         <li>Client-based approaches to projects</li>
                       </ul>
-                      <a href="https://kent.edu.au/" class="btn btn-light">Kent Institute</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="carousel-item" data-bs-theme="light">
-                  <div class="card">
-                    <img src="images/codecademy.png" class="card-img-top"
-                      alt="The logo for the learning resource website Codecademy">
-                    <div class="card-body">
-                      <!-- <h5 class="card-title">Codecademy</h5> -->
-                      <p class="card-text">Through Codecademy I have completed the following courses:</p>
-                      <ul>
-                        <li>Learn HTML</li>
-                        <li>Learn CSS</li>
-                        <li>Learn JavaScript</li>
-                      </ul>
-                      <p>I am currently working on the Full Stack Engineer career path course.</p>
+                      <a href="https://kent.edu.au/" target="_blank" rel="noopener" class="btn btn-light">Kent
+                        Institute</a>
                     </div>
                   </div>
                 </div>
                 <!-- Card 3 -->
                 <div class="carousel-item" data-bs-theme="light">
                   <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="images/codecademy.png" class="card-img-top"
+                      alt="The logo for the learning resource website Codecademy">
                     <div class="card-body">
-                      <h5 class="card-title">Kreativestorm</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
+                      <p>I am currently studying the Full Stack Engineer career path course.</p>
+                      <h5>Technical Skills Practiced Through Codecadmy:</h5>
+                      <ul>
+                        <li>HTML: Advanced</li>
+                        <li>CSS: Advanced</li>
+                        <li>JavaScript: Proficient</li>
+                        <li>React: Beginner</li>
+                      </ul>
+                      <h5>Recent Projects:</h5>
+                      <ul>
+                        <li>Deploying React App with Netlify</li>
+                        <li>Spotify API Manipulation with React</li>
+                        <li>DOM manipulation with JS</li>
+                      </ul>
+                      <h5>Certifications:</h5>
+                      <ul>
+                        <li>Learn HTML</li>
+                        <li>Learn CSS</li>
+                        <li>Learn JavaScript</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
@@ -309,8 +740,7 @@
             <div class="cv">
               <h2 class="negative-content wow animate__animated animate__slideInRight">Curriculum Vitae
               </h2>
-
-              <a href="assets/sean_kennelly_cv.pdf">
+              <a href="assets/sean_kennelly_cv.pdf" target="_blank" rel="noopener">
                 <img src="images/cv.png"
                   alt="A screenshot of my C.V, which can be accessed in PDF form by clicking this image">
               </a>
@@ -343,12 +773,12 @@
           </h6>
           <div>
             <a href="https://github.com/seankennelly" target="_blank" rel="noopener">
-              <img class="social-icon" src="images/logo_github.png" alt="The logo for the git repository site Github">
+              <img class="social-icon" src="./images/logo_github.png" alt="The logo for the git repository site Github">
             </a>
-            <a href="#" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/sean-kennelly/" target="_blank" rel="noopener">
               <img class="social-icon" src="images/logo_linkedin.png" alt="The logo for the social media site LinkedIn">
             </a>
-            <a href="#" target="_blank" rel="noopener">
+            <a href="https://www.instagram.com/sean_kennelly?igsh=MW5vNTl2OHR6eXBhaw==" target="_blank" rel="noopener">
               <img class="social-icon" src="images/logo_insta.png" alt="The logo for the social media site Instagram">
             </a>
           </div>

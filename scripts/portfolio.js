@@ -1,6 +1,5 @@
+// HEADER ANIMATION
 const meImg = document.querySelector("#me-img");
-
-// Function passes 4 animations to header pic in a loop
 let animationIndex = 0;
 const animate = () => {
   // Removes existing animation class, cycles through animations in array, then resets array index back to 0 after fourth click
@@ -16,5 +15,24 @@ const animate = () => {
     animationIndex = 0;
   };
 }
-
 meImg.addEventListener('click', animate);
+
+
+// TILE FLIP ANIMATION
+const tileIds = ['moonrise', 'web-apps', 'twava', 'macrotech', 'iwc'];
+
+const flip = (obj) => {
+  obj.flipButtonArray.forEach(button => {
+    button.addEventListener('click', () => {
+      obj.tile.classList.toggle('flip-container');
+    });
+  });
+};
+
+tileIds.forEach(id => {
+  const obj = {
+    tile: document.getElementById(`${id}-tile`),
+    flipButtonArray: document.getElementById(`${id}-tile`).querySelectorAll('.flip-button'),
+  };
+  flip(obj);
+});
