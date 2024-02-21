@@ -1,5 +1,6 @@
 ![Logo for my Portfolio site](./images/favicons/android-chrome-192x192.png)
 # Portfolio Site README
+www.seankennelly.com
 https://seankennelly.github.io/Portfolio/
 
 ## Description
