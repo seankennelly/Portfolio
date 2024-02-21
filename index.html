@@ -18,8 +18,10 @@
     rel="stylesheet">
   <!-- Animate CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- CSS Reset Stylesheet -->
+  <link rel="stylesheet" href="./styles/reset.css">
   <!-- My Stylesheet -->
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   <title>Seán Kennelly | Portfolio</title>
 </head>
 
@@ -27,7 +29,7 @@
   <!-- Nav -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Seán Kennelly | Portfolio</a>
+      <a class="navbar-brand" href="#anchor-header">Seán Kennelly | Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -48,7 +50,7 @@
 
   <div class="container-fluid px-5">
     <!-- Header -->
-    <header>
+    <header id="anchor-header">
       <img id="me-img" class="animate__animated animate__backInLeft" src="images/me.jpg"
         alt="A picture of me holding a book">
       <h1>Seán Kennelly</h1>
@@ -260,7 +262,7 @@
               </div>
               <!-- Back side of tile -->
               <div class="back">
-                <p class="back-button flip-button" id="moonrise-back">Back</p>
+                <p class="back-button flip-button">Back</p>
                 <!-- Tab component nav -->
                 <nav>
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -333,7 +335,7 @@
               </div>
               <!-- Back side of tile -->
               <div class="back">
-                <p class="back-button flip-button" id="moonrise-back">Back</p>
+                <p class="back-button flip-button">Back</p>
                 <!-- Tab component nav -->
                 <nav>
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -420,7 +422,7 @@
               </div>
               <!-- Back side of tile -->
               <div class="back">
-                <p class="back-button flip-button" id="moonrise-back">Back</p>
+                <p class="back-button flip-button">Back</p>
                 <!-- Tab component nav -->
                 <nav>
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -744,12 +746,10 @@
                 <img src="images/cv.png"
                   alt="A screenshot of my C.V, which can be accessed in PDF form by clicking this image">
               </a>
-
             </div>
           </section>
         </div>
       </div>
-
 
     </main>
   </div>
@@ -795,15 +795,13 @@
           <!-- End GreenGeeks Seal Code -->
         </div>
       </div>
-      <!-- Grid row -->
     </div>
 
     <!-- Copyright -->
     <div class="text-center p-4">
       <small>
-        <p>Copyright &copy;
-          <script>document.write(new Date().getFullYear())</script> Seán Kennelly - All Rights Reserved
-        </p>
+        Copyright &copy;
+        <script>document.write(new Date().getFullYear())</script> Seán Kennelly - All Rights Reserved
       </small>
     </div>
     <!-- End Copyright -->

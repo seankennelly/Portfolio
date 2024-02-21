@@ -1,144 +1,29 @@
 /*  CONTENTS
-
-1. CSS RESET
-2. PAGE STANDARDS
-3. NAVBAR & FOOTER
-4. HEADER
-5. MAIN:
-    5.1. PROJECT DISPLAYS
-    5.2. RELEVANT EXPERIENCE
-    5.3. COURSES & CV CONTAINER
-    5.4. COURSES
-    5.5. CV
+1. PAGE STANDARDS
+2. NAVBAR & FOOTER
+3. HEADER
+4. MAIN:
+    4.1. PROJECT DISPLAYS
+    4.2. RELEVANT EXPERIENCE
+    4.3. COURSES & CV CONTAINER
+    4.4. COURSES
+    4.5. CV
 */
 
-/* -----------
-  1. CSS RESET
-  --------- */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-a {
-  all: unset;
-}
-
-
 /* -------------
-  2. PAGE STANDARDS
+  1. PAGE STANDARDS
   ------------ */
 body {
   font-family: 'Roboto Mono', monospace;
   text-align: center;
+}
+
+:target:before {
+  /* Stops anchor links scrolling too far */
+  content: "";
+  display: block;
+  height: 56px;
+  margin: -56px 0 0;
 }
 
 img {
@@ -186,7 +71,7 @@ section {
 }
 
 /* --------------
-  3. NAV & FOOTER
+  2. NAV & FOOTER
   --------------*/
 .navbar {
   position: sticky;
@@ -206,6 +91,7 @@ section {
 
 .navbar-brand {
   font-size: calc(0.75rem + 0.5vw);
+  cursor: pointer;
 }
 
 nav .links {
@@ -215,7 +101,7 @@ nav .links {
 /* Note below is MAX not MIN */
 @media(max-width: 992px) {
   .navbar-collapse {
-    /* Stops collapsed text butting up against toggle */
+    /* Stops collapsed text butting up against toggle button */
     margin-right: 5rem;
   }
 
@@ -269,8 +155,8 @@ footer .row {
 
 footer hr {
   /* Horizonatal rule in footer */
-  margin: 1.25rem auto 0;
   width: 50%;
+  margin: 1.25rem auto 0;
 }
 
 @media (min-width: 768px) {
@@ -321,18 +207,18 @@ footer small {
 }
 
 /* ---------
-  4. Header 
+  3. Header 
   --------*/
 header {
   padding: 3rem 0 2rem;
 }
 
 header img {
+  position: relative;
   max-width: 200px;
   margin: 0 auto 1rem;
   border-radius: 50%;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.258);
-  position: relative;
   cursor: pointer;
 }
 
@@ -350,14 +236,14 @@ header img {
 }
 
 header h1 {
-  font-size: 1.75rem;
   margin-bottom: 0.5rem;
+  font-size: 1.75rem;
 }
 
 header .tagline.negative-content {
   margin: 0 auto 4rem;
-  font-size: 1.1rem;
   padding: 0.2rem 0.5rem;
+  font-size: 1.1rem;
 }
 
 header p {
@@ -368,7 +254,7 @@ header p {
 }
 
 /* ---------------------------
-  Main: 5.1. Project Displays
+  Main: 4.1. Project Displays
   -------------------------- */
 .projects-wrapper {
   display: flex;
@@ -398,6 +284,7 @@ header p {
   .project-display {
     width: 40%;
     margin: 1rem 1rem 1rem;
+    /* Box Shadow changes when tiles aren't stacked vertically */
     -webkit-box-shadow: 0px 6px 6px 3px rgba(115, 115, 115, 1);
     -moz-box-shadow: 0px 6px 6px 3px rgba(115, 115, 115, 1);
     box-shadow: 0px 6px 6px 3px rgba(115, 115, 115, 1);
@@ -418,10 +305,10 @@ header p {
 }
 
 .project-display img {
-  opacity: 1;
   display: block;
   width: 100%;
   height: auto;
+  opacity: 1;
   transition: .5s ease;
   backface-visibility: hidden;
 }
@@ -430,26 +317,26 @@ header p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transition: .5s ease;
+  padding: 16px 32px;
   opacity: 0;
+  transition: .5s ease;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
   background-color: rgb(47, 47, 47);
   color: white;
-  padding: 16px 32px;
 }
 
 .project-display h3 {
-  font-size: 1rem;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 .project-display h4 {
-  font-family: 'IBM Plex Mono', monospace;
-  color: rgb(187, 184, 184);
-  font-size: 0.75rem;
   margin-bottom: 0.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: rgb(187, 184, 184);
 }
 
 .project-display h4::before {
@@ -502,7 +389,7 @@ header p {
 
   .project-display:nth-child(3) .float-text,
   .project-display:nth-child(6) .float-text {
-    /* For 2nd & 5th tiles with non-conforming links */
+    /* For 2nd & 5th tiles with non-standard links */
     width: 100%;
   }
 }
@@ -521,8 +408,8 @@ header p {
   margin: 0.25rem 0.5rem;
 }
 
-/* TILE FLIP 
-  (ALSO USES JS) */
+/* TILE FLIP ANIMATION
+  (ALSO USES JS TO TRIGGER) */
 
 .flip-container>.tile {
   transform: rotateY(180deg);
@@ -565,7 +452,6 @@ header p {
 }
 
 .back-button {
-  /* margin-bottom: 1rem; */
   padding: 0.5rem;
   background-color: #FFFFFF;
   color: rgb(47, 47, 47);
@@ -573,7 +459,6 @@ header p {
 }
 
 .tab-content {
-  /* margin-top: 1rem; */
   display: flex;
   justify-content: center;
   padding: 1rem;
@@ -583,8 +468,8 @@ header p {
 }
 
 .tab-content h5 {
-  font-weight: 600;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .tab-content p {
@@ -607,7 +492,7 @@ header p {
 }
 
 /* ---------------------------
-  Main: 5.2. Relevant Experience 
+  Main: 4.2. Relevant Experience 
   ---------------------------*/
 .experience {
   display: flex;
@@ -642,12 +527,12 @@ header p {
 }
 
 .experience li {
-  list-style-type: disc;
   padding: 0.5rem 0;
+  list-style-type: disc;
 }
 
 /* -------------------------------
-  Main: 5.3. Courses & CV Container
+  Main: 4.3. Courses & CV Container
   ------------------------------- */
 .courses-cv-wrapper {
   display: flex;
@@ -666,7 +551,7 @@ header p {
 }
 
 /* ---------------
-  Main: 5.4. Courses
+  Main: 4.4. Courses
   ---------------*/
 section.courses {
   margin-bottom: 0;
@@ -674,34 +559,15 @@ section.courses {
 
 .courses {
   /* So that page view is not disrupted when cycling through carousel elements of varying heights */
-  min-height: 691px;
+  min-height: 905px;
 }
 
 .card-container {
-  padding: 0;
   margin: 0 auto 0;
-}
-
-@media(min-width: 700px) {
-  .card-container {
-    width: calc(80% + 2rem);
-  }
-}
-
-@media(min-width: 992px) {
-  .card-container {
-    width: calc(75% + 4rem);
-  }
-}
-
-@media(min-width: 992px) {
-  .card {
-    min-height: 593px;
-  }
+  padding: 0;
 }
 
 .card {
-  /* max-width: 400px; */
   margin: 0 auto 2rem;
 }
 
@@ -726,7 +592,21 @@ section.courses {
   list-style-type: none;
 }
 
+@media(min-width: 700px) {
+  .card-container {
+    width: calc(80% + 2rem);
+  }
+}
+
 @media(min-width: 992px) {
+  .card-container {
+    width: calc(75% + 4rem);
+  }
+
+  .card {
+    min-height: 593px;
+  }
+
   .card li {
     text-align: left;
     list-style-type: disc;
@@ -734,19 +614,15 @@ section.courses {
 }
 
 .card-container .col-12:first-child img,
-.carousel-item:first-child img {
-  /* Padding around Kent logo */
+.card-container .col-12:nth-child(2) img,
+.carousel-item:first-child img,
+.carousel-item:nth-child(2) img {
+  /* Padding around Kreativstorm & Kent logos */
   padding: 1rem 1rem 0;
 }
 
-.card-container .col-12:nth-child(2) p:last-child,
-.carousel-item:nth-child(2) p:last-child {
-  /* Margin for 'Codecademy' card final p */
-  margin-top: 2rem;
-}
-
 /* -------------
-  Main: 5.5. C.V
+  Main: 4.5. C.V
   ----------- */
 .cv h2 {
   display: block;
