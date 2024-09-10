@@ -62,7 +62,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-9">
               <h2>Seán Kennelly</h2>
-              <p>I am a <span class="typed" data-typed-items="Frontend Developer">Backend Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+              <p>I am a <span class="typed" data-typed-items="Frontend Developer, Backend Developer"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
               <div class="social-links">
                 <a href="https://github.com/seankennelly" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
                 <a href="https://www.linkedin.com/in/sean-kennelly/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
@@ -227,7 +227,6 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Portfolio</h2>
-          <p>Here are some of the projects I have worked on.</p>
         </div>
         <!-- End Section Title -->
 
@@ -247,7 +246,7 @@
                       <a type="button" class="btn btn-outline-light btn-sm" href="https://www.seankennelly.com/gazetteer" target="“_blank”" rel="noopener">Site</a>
                       <!-- Old link to Github -->
                       <!-- <a type="button" class="btn btn-outline-light btn-sm" href="https://github.com/seankennelly/seanKennellyITCareerSwitch/tree/main/gazetteer" target="_blank" rel="noopener">Github</a> -->
-                      <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#gazetteerGithubModal">Github</button>
+                      <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#githubRestrictedModal">Github</button>
                     </div>
                   </div>
                 </div>
@@ -256,16 +255,16 @@
             <!-- FLIP 2: PORTFOLIO PROJECT 2 -->
             <div class="project-display mx-auto" id="iwc-tile">
               <div class="tile">
-                <img src="./images/portfolio/placeholder.png" alt="A screengrab of my project" />
+                <img src="./images/portfolio/directory.png" alt="A screengrab of my project" />
                 <div class="float-text d-flex flex-column justify-content-center align-items-center">
-                  <h3>Upcoming 2nd Portfolio Project</h3>
-                  <p class="technologies">Technologies to be listed here</p>
+                  <h3>Company Directory Project</h3>
+                  <p class="technologies">HTML, CSS, Bootstrap, JS, jQuery, PHP, SQL</p>
                   <div class="project-links">
-                    <!-- <div class="btn-group" role="group" aria-label="Button group">
-                      <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#gazetteerModal">Info</button>
-                      <a type="button" class="btn btn-outline-light btn-sm" href="https://www.seankennelly.com/gazetteer" target="“_blank”" rel="noopener">Site</a>
-                      <a type="button" class="btn btn-outline-light btn-sm" href="https://github.com/seankennelly/seanKennellyITCareerSwitch/tree/main/gazetteer" target="_blank" rel="noopener">Github</a>
-                    </div> -->
+                    <div class="btn-group" role="group" aria-label="Button group">
+                      <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#directoryModal">Info</button>
+                      <a type="button" class="btn btn-outline-light btn-sm" href="https://www.seankennelly.com/companydirectory" target="“_blank”" rel="noopener">Site</a>
+                      <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#githubRestrictedModal">Github</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -372,8 +371,8 @@
             </div>
           </div>
         </div>
-        <!-- Gazetteer Github Modal -->
-        <div class="modal fade" id="gazetteerGithubModal" tabindex="-1" aria-labelledby="gazetteerGithubModal" aria-hidden="true">
+        <!-- Github Restricted Modal -->
+        <div class="modal fade" id="githubRestrictedModal" tabindex="-1" aria-labelledby="githubRestrictedModal" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -386,8 +385,33 @@
             </div>
           </div>
         </div>
-        <!-- Project 2 Modal -->
-        <!-- TO BE INCLUDED LATER -->
+        <!-- Company Directory Modal -->
+        <div class="modal fade" id="directoryModal" tabindex="-1" aria-labelledby="directoryModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="directoryModalLabel">Company Directory Project</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h4>Project Description</h4>
+                <p>
+                  The brief for this project was to create a responsive website that allows for the maintenance of a company personnel database. As CRUD operations were the main focus of this project, the frontend design was to be kept simple. Key concerns were effective database maintenance, data integrity, and intuitive actions for ease of use.
+                </p>
+                <h4>Technologies:</h4>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Bootstrap</li>
+                  <li>JavaScript</li>
+                  <li>jQuery</li>
+                  <li>PHP</li>
+                  <li>SQL</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- PERN Modal -->
         <div class="modal fade" id="pernModal" tabindex="-1" aria-labelledby="pernModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog modal-dialog-centered-centered">
