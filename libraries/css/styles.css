@@ -235,6 +235,12 @@ h6 {
   }
 }
 
+@media(min-width: 1601px) {
+  .footer {
+    padding-left: 0;
+  }
+}
+
 .footer h3 {
   font-size: 36px;
   font-weight: 700;
