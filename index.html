@@ -121,11 +121,13 @@
             <i class="devicon-jquery-plain-wordmark"></i>
             <i class="devicon-react-original-wordmark"></i>
             <i class="devicon-redux-original"></i>
+            <i class="devicon-tailwindcss-plain-wordmark"></i>
             <i class="devicon-php-plain"></i>
-            <i class="devicon-python-plain-wordmark"></i>
+            <i class="devicon-laravel-original-wordmark"></i>
             <i class="devicon-express-original-wordmark"></i>
             <i class="devicon-nodejs-plain-wordmark"></i>
             <i class="devicon-postgresql-plain-wordmark"></i>
+            <i class="devicon-python-plain-wordmark"></i>
           </div>
         </div>
       </section>
@@ -215,8 +217,8 @@
         </div>
         <div class="download-cv d-flex justify-content-center align-items-center">
           <a id="custom-button" class="btn btn-outline-primary align-items-center" href="assets/sean_kennelly_cv.pdf" target="_blank" rel="noopener">
-            <i class="bi bi-file-earmark-arrow-down"></i>
-            <p class="m-0 p-0">Download C.V.</p>
+            <i class="bi bi-file-pdf"></i>
+            <p class="m-0 p-0">View C.V.</p>
           </a>
         </div>
       </section>
@@ -252,7 +254,24 @@
                 </div>
               </div>
             </div>
-            <!-- FLIP 2: PORTFOLIO PROJECT 2 -->
+            <!-- FLIP 2: SNIPNEST -->
+            <div class="project-display mx-auto" id="snipnest-tile">
+              <div class="tile">
+                <img src="./images/portfolio/snipnest.png" alt="A screengrab of the homepage for my SnipNest portfolio project" />
+                <div class="float-text d-flex flex-column justify-content-center align-items-center">
+                  <h3>SnipNest: Code Snippet Repository</h3>
+                  <p class="technologies">PHP, Laravel, Blade, MySQL, Tailwind</p>
+                  <div class="project-links">
+                    <div class="btn-group" role="group" aria-label="Button group">
+                      <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#snipnestModal">Info</button>
+                      <a type="button" class="btn btn-outline-light btn-sm" href="https://www.seankennelly.com/snipnest" target="“_blank”" rel="noopener">Site</a>
+                      <a type="button" class="btn btn-outline-light btn-sm" href="https://github.com/seankennelly/SnipNest" target="_blank" rel="noopener">Github</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- FLIP 3: PORTFOLIO PROJECT 2 -->
             <div class="project-display mx-auto" id="iwc-tile">
               <div class="tile">
                 <img src="./images/portfolio/directory.png" alt="A screengrab of my project" />
@@ -269,7 +288,7 @@
                 </div>
               </div>
             </div>
-            <!-- FLIP 3: PERN APP -->
+            <!-- FLIP 4: PERN APP -->
             <div class="project-display mx-auto" id="iwc-tile">
               <div class="tile">
                 <img src="./images/portfolio/pern.png" alt="A screenshot of my PERN To-Do app" />
@@ -282,21 +301,6 @@
                       <a type="button" class="btn btn-outline-light btn-sm" href="https://pern-todo-app-frontend.onrender.com/" target="“_blank”" rel="noopener">Site</a>
                       <a type="button" class="btn btn-outline-light btn-sm" href="https://github.com/seankennelly/PERN_ToDo_App" target="_blank" rel="noopener">Github</a>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- FLIP 4: MOONRISE -->
-            <div class="project-display mx-auto" id="moonrise-tile">
-              <div class="tile">
-                <img src="images/portfolio/moonrise.jpeg" alt="A screengrab of the homepage for Moonrise Maternity" />
-                <div class="float-text d-flex flex-column justify-content-center align-items-center">
-                  <h3>Moonrise Maternity Website</h3>
-                  <p class="technologies">HTML, CSS, Bootstrap</p>
-                  <div class="btn-group" role="group" aria-label="Button group">
-                    <button type="button" class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#moonriseModal">Info</button>
-                    <a type="button" class="btn btn-outline-light btn-sm" href="https://www.moonrisematernity.com" target="“_blank”" rel="noopener">Site</a>
-                    <a type="button" class="btn btn-outline-light btn-sm" href="https://github.com/seankennelly/Moonrise_Maternity" target="_blank" rel="noopener">Github</a>
                   </div>
                 </div>
               </div>
@@ -385,6 +389,34 @@
             </div>
           </div>
         </div>
+        <!-- Snipnest Modal -->
+        <div class="modal fade" id="snipnestModal" tabindex="-1" aria-labelledby="snipnestModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="snipnestModalLabel">SnipNest</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h4>Project Description</h4>
+                <p>
+                  A Laravel-based web app that acts as a user-submitted repository for Code Snippets, with a sharing and social environment. CRUD operations can be performed on the MySQL database, allowing users to register and log in or out, as well as post, view, edit, and delete their code snippets. Users can also filter and search through posts. 
+                </p>
+                <h4>Technologies:</h4>
+                <ul>
+                  <li>PHP</li>
+                  <li>Laravel</li>
+                  <li>Blade</li>
+                  <li>MySQL</li>
+                  <li>Tailwind</li>
+                  <li>JavaScript</li>
+                  <li>Bcrypt</li>
+                  <li>Composer</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Company Directory Modal -->
         <div class="modal fade" id="directoryModal" tabindex="-1" aria-labelledby="directoryModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -438,38 +470,6 @@
                 </ul>
                 <h4>Note</h4>
                 <p>Please note that due to the application being hosted on Render's free-tier, the site can take up to 50 seconds to become fully active.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Moonrise Modal -->
-        <div class="modal fade" id="moonriseModal" tabindex="-1" aria-labelledby="moonriseModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="moonriseModalLabel">Moonrise Maternity Website</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <h4>Project Description</h4>
-                <p>
-                  This site was built according to client specifications, and using content produced by the client themselves. The key challenge of the site was to lay out a large amount of text content without bulky paragraphs. I used Bootstrap
-                  components (accordions, carousels etc) to allow users to interact with an otherwise static page. I discussed and confirmed colour and design conventions with the client, and created a business logo for them. I also host the site,
-                  and set up a business email address for them.
-                </p>
-                <h4>Technologies:</h4>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>Bootstrap</li>
-                </ul>
-                <h4>Deployment:</h4>
-                <ul>
-                  <li>Domain registration</li>
-                  <li>Application of SSL Certificate</li>
-                  <li>Use of FTP for website asset transfer</li>
-                  <li>Hosting</li>
-                </ul>
               </div>
             </div>
           </div>
