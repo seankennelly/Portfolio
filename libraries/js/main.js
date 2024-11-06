@@ -81,7 +81,7 @@
     });
   }
 
-   // Init swiper sliders
+  // Init swiper sliders
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(swiperElement.querySelector(".swiper-config").innerHTML.trim());
@@ -142,19 +142,19 @@ $(document).ready(function () {
     $(".loading").removeClass("d-none").addClass("d-block");
 
     let formData = $(this).serialize();
-    console.log(formData);
+    // console.log(formData);
     $.ajax({
       type: "POST",
       url: "libraries/php/send_email.php",
       data: formData,
       success: function (response) {
-        console.log(response);
+        // console.log(response);
         $(".loading").removeClass("d-block").addClass("d-none");
         $(".sent-message").removeClass("d-none").addClass("d-block");
         $("#contact-form")[0].reset();
       },
       error: function (error) {
-        console.log(error);
+        // console.log(error);
         $(".loading").removeClass("d-block").addClass("d-none");
         $(".error-message").removeClass("d-none").addClass("d-block").text("An error occurred while sending the message. Please try again.");
       },
